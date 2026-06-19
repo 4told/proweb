@@ -53,7 +53,6 @@ button {
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 h1,
@@ -92,7 +91,9 @@ a {
 }
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
   z-index: 1;
   font-size: 16px;
   padding: 5px 10px;
@@ -110,9 +111,6 @@ header nav {
 header nav  a {
   color: var(--text-h);
   text-transform: uppercase;
-}
-
-main {
 }
 
 header .theme-controls {
@@ -182,6 +180,34 @@ video {
   width: 100%;
 }
 
+.solutions {
+  h1 {
+    text-align: center;
+    color: var(--text-h);
+  }
 
+
+  .slider {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    overflow-x:  auto;
+  }
+
+  .solution-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--accent-border);
+    padding: 8px 12px;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+
+    h3 {
+      text-align: center;
+      color: var(--text);
+    }
+  }
+}
 
 

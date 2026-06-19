@@ -1,39 +1,23 @@
-export const translations = {
-    ua: {
-        heroTitle: 'Починаємо Влад )',
-        about: 'Про нас',
-        contacts: 'Контакти',
-    },
-
-    ru: {
-        heroTitle: 'Начинаем Влад )',
-        about: 'О нас',
-        contacts: 'Контакты',
-    },
-
-    en: {
-        heroTitle: 'Get started Vlad )',
-        about: 'About Us',
-        contacts: 'Contacts',
-    },
-} as const
+import  {translations} from "./constants/i18.ts";
 
 export type Lang = keyof typeof translations
 
 export let currentLang: Lang =
     (localStorage.getItem('lang') as Lang) || 'ua'
 
-export function t(key: keyof typeof translations.ua): string {
-    return translations[currentLang][key]
-}
+export function t(path: string): string {
+    const keys = path.split('.')
 
-// export function setLang(lang: Lang) {
-//     currentLang = lang
-//
-//     localStorage.setItem('lang', lang)
-//
-//     renderTranslations()
-// }
+    let value: any = translations[currentLang]
+
+    for (const key of keys) {
+        value = value?.[key]
+    }
+
+    return typeof value === 'string'
+        ? value
+        : path
+}
 
 export function renderTranslations() {
     document.querySelectorAll('[data-i18]').forEach((element) => {
