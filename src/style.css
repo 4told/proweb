@@ -210,4 +210,21 @@ video {
   }
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px) scale(.98);
+  filter: blur(4px);
+
+  transition:
+          opacity .8s ease,
+          transform .8s cubic-bezier(.22,1,.36,1),
+          filter .8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
 

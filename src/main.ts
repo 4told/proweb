@@ -1,6 +1,6 @@
 import './style.css'
 import heroVideo from './assets/hero-video.mp4'
-import { initTheme } from './theme'
+import {initTheme, observerse} from './theme'
 import {setLanguage, renderTranslations, initLangDropdown, updateLanguageDropdown} from './i18'
 import {solutions} from "./constants/solutions.ts";
 
@@ -32,18 +32,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 <main>
     <section style="position: relative;">
-        <video loop autoplay muted src="${heroVideo}"></video>
+        <video class="fade-up" style="transition-delay: 0.5s" loop autoplay muted src="${heroVideo}"></video>
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-            <h1 data-i18="heroTitle"></h1>
+            <h1 class="fade-up" style="transition-delay: 1s" data-i18="heroTitle"></h1>
             <p data-i18="heroText"></p>
-            <a href="#about" data-i18="about"></a>
-            <a href="#contacts" data-i18="contacts"></a>
             <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
       </div>
   </section>
   
   <section class="solutions">
-    <h1 data-i18="solutions.title"></h1>
+    <h1 class="fade-up" data-i18="solutions.title"></h1>
     <div class="slider">
         ${solutions.map(solution => `
           <div class="solution-card">
@@ -54,6 +52,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         `).join('')}
       </div>
   </section>
+
   
 </main>
 `
@@ -64,4 +63,4 @@ setLanguage()
 
 initLangDropdown()
 updateLanguageDropdown()
-
+observerse()
