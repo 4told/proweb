@@ -1,17 +1,15 @@
 export function initTheme() {
   const root = document.documentElement
   const toggleBtn = document.getElementById('theme-toggle')
-  const savedTheme = localStorage.getItem('theme')
+  const savedTheme = localStorage.getItem('theme') || 'dark'
 
-  if (savedTheme) {
-    root.setAttribute('data-theme', savedTheme)
+  root.setAttribute('data-theme', savedTheme)
 
-    if (toggleBtn) {
-      toggleBtn.textContent =
-          savedTheme === 'dark'
-              ? '☀️'
-              : '🌙'
-    }
+  if (toggleBtn) {
+    toggleBtn.textContent =
+        savedTheme === 'dark' // create enum
+            ? '☀️'
+            : '🌙'
   }
 
   toggleBtn?.addEventListener('click', () => {
