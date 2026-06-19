@@ -31,7 +31,8 @@ export function initTheme() {
             : '🌙'
   })
 }
-export function g() {
+
+export function observer() {
   const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {

@@ -1,6 +1,6 @@
 import './style.css'
 import heroVideo from './assets/hero-video.mp4'
-import {initTheme, observerse} from './theme'
+import {initTheme, observer} from './theme'
 import {setLanguage, renderTranslations, initLangDropdown, updateLanguageDropdown} from './i18'
 import {solutions} from "./constants/solutions.ts";
 
@@ -63,4 +63,4 @@ setLanguage()
 
 initLangDropdown()
 updateLanguageDropdown()
-observerse()
+observer()
