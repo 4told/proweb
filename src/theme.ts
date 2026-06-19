@@ -1,10 +1,7 @@
 export function initTheme() {
   const root = document.documentElement
   const toggleBtn = document.getElementById('theme-toggle')
-
   const savedTheme = localStorage.getItem('theme')
-
-
 
   if (savedTheme) {
     root.setAttribute('data-theme', savedTheme)

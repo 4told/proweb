@@ -27,13 +27,13 @@ export function t(key: keyof typeof translations.ua): string {
     return translations[currentLang][key]
 }
 
-export function setLang(lang: Lang) {
-    currentLang = lang
-
-    localStorage.setItem('lang', lang)
-
-    renderTranslations()
-}
+// export function setLang(lang: Lang) {
+//     currentLang = lang
+//
+//     localStorage.setItem('lang', lang)
+//
+//     renderTranslations()
+// }
 
 export function renderTranslations() {
     document.querySelectorAll('[data-i18]').forEach((element) => {
@@ -61,4 +61,52 @@ export function setLanguage() {
         ?.addEventListener('click', () => setLang('en'))
 
 }
+export function setLang(lang: Lang) {
+    currentLang = lang
 
+    localStorage.setItem('lang', lang)
+
+    renderTranslations()
+    updateLanguageDropdown()
+
+    document
+        .querySelector('.lang-switcher')
+        ?.classList.remove('open')
+}
+
+export function updateLanguageDropdown() {
+    const currentLangElement =
+        document.getElementById('current-lang')
+
+    currentLangElement!.textContent =
+        currentLang.toUpperCase()
+
+    document
+        .querySelectorAll<HTMLButtonElement>(
+            '.lang-dropdown [data-lang]'
+        )
+        .forEach((button) => {
+            button.style.display =
+                button.dataset.lang === currentLang
+                    ? 'none'
+                    : 'block'
+        })
+}
+
+export function initLangDropdown() {
+    const switcher =
+        document.querySelector('.lang-switcher')
+
+    const current =
+        document.querySelector('.lang-current')
+
+    current?.addEventListener('click', () => {
+        switcher?.classList.toggle('open')
+    })
+
+    document.addEventListener('click', (e) => {
+        if (!switcher?.contains(e.target as Node)) {
+            switcher?.classList.remove('open')
+        }
+    })
+}
