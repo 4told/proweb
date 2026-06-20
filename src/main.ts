@@ -1,5 +1,7 @@
 import './style.css'
 import heroVideo from './assets/hero-video.mp4'
+import whatWeDo from './assets/what-we-do.png'
+import selectedWork from './assets/selected-works.png'
 import {initTheme, observer} from './theme'
 import {setLanguage, renderTranslations, initLangDropdown, updateLanguageDropdown} from './i18'
 import {solutions} from "./constants/solutions.ts";
@@ -51,7 +53,25 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           </div>
         `).join('')}
       </div>
+       <img src="${whatWeDo}" class="vite" alt="Vite logo" />
   </section>
+  
+  
+  <br><br><br>
+  
+  
+
+  
+  <br><br><br>
+    <section class="Selected work">
+            <h1 class="fade-up">Selected work</h1>
+            <img src="${selectedWork}" class="vite" alt="Vite logo" />
+    </section>
+  
+    <section class="How it happens">
+        <h1 class="fade-up">How it happens</h1>
+       
+    </section>
 
   
 </main>

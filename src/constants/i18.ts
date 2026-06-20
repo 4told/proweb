@@ -4,7 +4,7 @@ export const translations = {
         about: 'Про нас',
         contacts: 'Контакти',
         solutions: {
-            title: 'Рішення для бізнесу'
+            title: 'What we do'
         }
     },
 
@@ -13,7 +13,7 @@ export const translations = {
         about: 'О нас',
         contacts: 'Контакты',
         solutions: {
-            title: 'Решения для бизнеса'
+            title: 'What we do'
         }
     },
 
@@ -22,7 +22,7 @@ export const translations = {
         about: 'About Us',
         contacts: 'Contacts',
         solutions: {
-            title: 'Solution for business'
+            title: 'What we do'
         }
     },
 } as const
