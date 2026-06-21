@@ -1,4 +1,4 @@
-import selectedWork from './assets/selected-works.png'
+import selectedWork from './../assets/selected-works.png'
 
 export function renderSelectedWork() {
     return `
