@@ -55,7 +55,7 @@ header {
       display: block;
     }
 
-    .open .lang-dropdown {
+    &.open .lang-dropdown {
       display: flex;
     }
   }
@@ -112,7 +112,7 @@ header {
 ========================= */
 
 
-/* Selected Work */
+//TODO use scss power for your styles pls
 .selected-work .card {
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -141,6 +141,7 @@ header {
 }
 
 /* Typography (global-safe, reviewer friendly) */
+//TODO I looked this styles in reset scss
 .selected-work h3,
 .how-it-happens h3 {
   color: var(--text-h);
@@ -153,7 +154,9 @@ header {
   font-size: 14px;
 }
 
+
 /* spacing override ONLY if needed */
+//TODO use bootstrap
 .selected-work,
 .how-it-happens {
   padding: 60px 0;
