@@ -1,15 +1,33 @@
-import selectedWork from './../assets/selected-works.png'
+
+import { selectedWorks } from '../constants/selectedWorks'
 
 export function renderSelectedWork() {
     return `
-        <section class="Selected work">
-                <h1 class="fade-up">Selected work</h1>
-                <img src="${selectedWork}" class="vite" alt="Vite logo" />
-        </section>
-    
-        <section class="How it happens">
-            <h1 class="fade-up">How it happens</h1>
-    
-        </section>
+<section class="selected-work py-5">
+  <div class="container">
+
+    <h1 class="fade-up text-center mb-5" data-i18="selectedWork.title"></h1>
+
+    <div class="row g-4">
+
+      ${selectedWorks.map(work => `
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card fade-up h-100">
+
+            <img class="card-img-top" src="${work.image}" alt="project" />
+
+            <div class="card-body">
+              <h3>${work.title}</h3>
+              <p>${work.description}</p>
+            </div>
+
+          </div>
+        </div>
+      `).join('')}
+
+    </div>
+
+  </div>
+</section>
     `
 }
