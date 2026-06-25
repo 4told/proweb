@@ -7,7 +7,7 @@ export function initTheme() {
 
   if (toggleBtn) {
     toggleBtn.textContent =
-        savedTheme === 'dark' // create enum
+        savedTheme === 'dark' // TODO create enum or type, use light theme on local host
             ? '☀️'
             : '🌙'
   }

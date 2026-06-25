@@ -1,4 +1,4 @@
-import {solutions} from "./../constants/solutions.ts";
+import {solutionsConst} from "../../constants/solutions.const.ts";
 
 export function renderWhatWeDo(): string {
     return `
@@ -7,7 +7,7 @@ export function renderWhatWeDo(): string {
                 <div class="row">
                     <h1 class="fade-up py-4" data-i18="solutions.title"></h1>
                     <div class="slider">
-                        ${solutions.map(solution => `
+                        ${solutionsConst.map(solution => `
                             <div class="card fade-up">
                                  <h3>${solution.title}</h3>
                                 <div class="description my-3 pb-4">
@@ -23,7 +23,7 @@ export function renderWhatWeDo(): string {
     `
 }
 
-export function initCardTilt() {
+export function improveSolutionCard() {
     const cards = document.querySelectorAll<HTMLElement>('.card');
 
     cards.forEach((card) => {
