@@ -2,6 +2,7 @@
 @use './styles/reset';
 @use './styles/animations';
 @use './modules/solutions/solutions';
+@use './modules/how-it-happens/how-it-happens';
 
 header {
   position: sticky;
@@ -25,7 +26,6 @@ header {
         color: var(--text-h);
         text-transform: uppercase;
       }
-
     }
 
     .theme-controls {
@@ -90,7 +90,6 @@ header {
     }
   }
 
-
   .scroll-progress {
     position: fixed;
     top: 0;
@@ -98,13 +97,9 @@ header {
     width: 0;
     height: 4px;
     z-index: 9999;
-    background: linear-gradient(
-            90deg,
-            #4A9EFF,
-            #60A5FA
-    );
+    background: linear-gradient(90deg, #4a9eff, #60a5fa);
 
-    box-shadow: 0 0 15px rgba(74, 158, 255, .5);
+    box-shadow: 0 0 15px rgba(74, 158, 255, 0.5);
     transition: width 0.05s linear;
   }
 }
@@ -123,14 +118,10 @@ header {
     left: 0;
     width: 50%;
     backdrop-filter: blur(1px) grayscale(1);
-    background: linear-gradient(
-            90deg,
-            var(--bg) 0%,
-            var(--accent-bg) 100%
-    );
+    background: linear-gradient(90deg, var(--bg) 0%, var(--accent-bg) 100%);
     z-index: 1;
   }
-  
+
   &-info {
     position: absolute;
     top: 50%;
@@ -139,22 +130,19 @@ header {
   }
 }
 
-
-
 /* =========================
    VLAD SECTION
 ========================= */
 
-
-.selected-work,
-.how-it-happens {
+.selected-work {
   .card {
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                border-color 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
 
     &:hover {
       transform: translateY(-6px);
