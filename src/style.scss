@@ -146,52 +146,20 @@ header {
 ========================= */
 
 
-//TODO use scss power for your styles pls
-.selected-work .card {
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.selected-work .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent-border);
-}
-
-/* How it happens */
-.how-it-happens .card {
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.how-it-happens .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  border-color: var(--accent-border);
-}
-
-/* Typography (global-safe, reviewer friendly) */
-//TODO I looked this styles in reset scss
-.selected-work h3,
-.how-it-happens h3 {
-  color: var(--text-h);
-  margin: 12px 0 6px;
-}
-
-.selected-work p,
-.how-it-happens p {
-  color: var(--text);
-  font-size: 14px;
-}
-
-
-/* spacing override ONLY if needed */
-//TODO use bootstrap
 .selected-work,
 .how-it-happens {
-  padding: 60px 0;
+  .card {
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      border-color: var(--accent-border);
+    }
+  }
 }
