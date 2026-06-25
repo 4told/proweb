@@ -1,5 +1,5 @@
-import whatWeDo from '../assets/what-we-do.png'
-import selectedWork from '../assets/selected-works.png'
+import whatWeDo from '../assets/images/what-we-do.png'
+import selectedWork from '../assets/images/selected-works.png'
 
 export interface ISelectedWork {
   title: string
@@ -7,7 +7,7 @@ export interface ISelectedWork {
   image: string
 }
 
-export const selectedWorks: ISelectedWork[] = [
+export const selectedWorksConst: ISelectedWork[] = [
   {
     title: 'Project One',
     description: 'Landing page / UI design',
