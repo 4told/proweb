@@ -3,23 +3,6 @@
 @use './styles/animations';
 @use './modules/solutions/solutions';
 
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 4px;
-  z-index: 9999;
-  background: linear-gradient(
-          90deg,
-          #4A9EFF,
-          #60A5FA
-  );
-
-  box-shadow: 0 0 15px rgba(74, 158, 255, .5);
-  transition: width 0.05s linear;
-}
-
 header {
   position: sticky;
   top: 0;
@@ -33,78 +16,96 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  nav {
-    display: flex;
-    gap: 12px;
-
-    a {
-      color: var(--text-h);
-      text-transform: uppercase;
-    }
-
-  }
-
-  .theme-controls {
-    display: flex;
-    gap: 7px;
-  }
-
-  button {
-    border-radius: 4px;
-    padding: 4px;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--text);
-  }
-
-  .lang-switcher {
-    position: relative;
-    display: inline-block;
-
-    &.open .arrow {
-      transform: rotate(-180deg);
-      display: block;
-    }
-
-    &.open .lang-dropdown {
+    nav {
       display: flex;
+      gap: 12px;
+
+      a {
+        color: var(--text-h);
+        text-transform: uppercase;
+      }
+
     }
-  }
 
-  .lang-current {
-    display: flex;
-    cursor: pointer;
-    color: var(--text-h);
-  }
-
-  .lang-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    background: var(--accent-bg);
+    .theme-controls {
+      display: flex;
+      gap: 7px;
+    }
 
     button {
-      padding: 10px;
-      border: none;
-      background: transparent;
-      color: var(--text-h);
-      cursor: pointer;
+      border-radius: 4px;
+      padding: 4px;
 
       &:hover {
         cursor: pointer;
       }
     }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .lang-switcher {
+      position: relative;
+      display: inline-block;
+
+      &.open .arrow {
+        transform: rotate(-180deg);
+        display: block;
+      }
+
+      &.open .lang-dropdown {
+        display: flex;
+      }
+    }
+
+    .lang-current {
+      display: flex;
+      cursor: pointer;
+      color: var(--text-h);
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      background: var(--accent-bg);
+
+      button {
+        padding: 10px;
+        border: none;
+        background: transparent;
+        color: var(--text-h);
+        cursor: pointer;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+
+  .scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    z-index: 9999;
+    background: linear-gradient(
+            90deg,
+            #4A9EFF,
+            #60A5FA
+    );
+
+    box-shadow: 0 0 15px rgba(74, 158, 255, .5);
+    transition: width 0.05s linear;
   }
 }
 
@@ -124,7 +125,6 @@ header {
     backdrop-filter: blur(1px) grayscale(1);
     background: linear-gradient(
             90deg,
-            //#4A9EFF 0%,
             var(--bg) 0%,
             var(--accent-bg) 100%
     );

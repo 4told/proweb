@@ -1,3 +1,5 @@
+import contact from './../assets/images/contact.png'
+import contact1 from './../assets/images/contact1.png'
 export function renderContact() {
     return `
 <section class="contact py-5">
@@ -34,5 +36,8 @@ export function renderContact() {
 
   </div>
 </section>
+
+<img class="card-img-top" src="${contact1}" alt="project" />
+<img class="card-img-top" src="${contact}" alt="project" />
     `
 }
