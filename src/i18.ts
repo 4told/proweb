@@ -1,4 +1,4 @@
-import  {translations} from "./constants/i18.ts";
+import  {translations} from "./constants/i18.const.ts";
 
 export type Lang = keyof typeof translations
 

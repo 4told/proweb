@@ -49,3 +49,23 @@ export function observer() {
   })
 
 }
+
+export function initScrollProgress(): void {
+  const progressBar = document.querySelector<HTMLElement>('.scroll-progress');
+
+  if (!progressBar) return;
+
+  const updateProgress = () => {
+    const scrollTop = window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress = (scrollTop / documentHeight) * 100;
+
+    progressBar.style.width = `${progress}%`;
+  };
+
+  window.addEventListener('scroll', updateProgress);
+  updateProgress();
+}

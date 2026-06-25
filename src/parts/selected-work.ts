@@ -1,5 +1,5 @@
 
-import { selectedWorks } from '../constants/selectedWorks'
+import { selectedWorksConst } from '../constants/selected-works.const.ts'
 
 export function renderSelectedWork() {
     return `
@@ -10,7 +10,7 @@ export function renderSelectedWork() {
 
     <div class="row g-4">
 
-      ${selectedWorks.map(work => `
+      ${selectedWorksConst.map(work => `
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card fade-up h-100">
 
