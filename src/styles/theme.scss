@@ -11,6 +11,7 @@
   --shadow:
           rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -37,9 +38,13 @@ html[data-theme="dark"] {
   --border: #2e303a;
   --code-bg: #1f2028;
   --accent: #c084fc;
-  --accent-bg: rgba(192, 132, 252, 0.15);
-  --accent-border: rgba(192, 132, 252, 0.5);
+  //--accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-bg: rgb(89 90 90 / 38%);
+  //--accent-border: rgba(192, 132, 252, 0.5);
+  --accent-border: rgba(74, 158, 255, 0.38);
   --social-bg: rgba(47, 48, 58, 0.5);
   --shadow:
           rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+
 }
