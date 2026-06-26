@@ -9,6 +9,7 @@ import {
 } from './i18';
 import { renderLayout } from './parts';
 import { improveSolutionCard } from './modules/solutions/solutions.ts';
+import { initHowItHappensScroll } from './modules/how-it-happens/how-it-happens';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = renderLayout();
 
@@ -19,6 +20,7 @@ setLanguage();
 initLangDropdown();
 updateLanguageDropdown();
 observer();
+initHowItHappensScroll();
 
 improveSolutionCard();
 
