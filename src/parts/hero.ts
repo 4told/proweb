@@ -1,18 +1,71 @@
-import heroVideo from './../assets/images/hero-video.mp4'
+const marquee = [
+    {name: 'Scroll Animations'},
+    {name: '3D Experiences'},
+    {name: 'Motion Design'},
+    {name: 'WebGL'},
+    {name: 'Responsive'},
+    {name: '60fps'},
+
+];
+
+const heroStep = [
+    {title: 'We Make Brands \n  Impossible \n   To Ignore'},
+    {title: 'We build\n   web sites\n that move.'},
+    {title: ' Let\'s Build\n Something\n Legendary'},
+];
 
 export function renderHero(): string {
     return `
-        <section class="hero" class="fade-up">
-            <video class="fade-up" style="transition-delay: 0.5s" loop autoplay muted src="${heroVideo}"></video>
-            <div class="container">
-                <div class="row">
-                    <div class="hero-info">
-                        <h1 class="fade-up" style="transition-delay: 1s" data-i18="heroTitle"></h1>
-                        <p data-i18="heroText"></p>
-                        <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-                    </div>
+        <section class="hero">
+            <div class="sticky">
+                <div class="canvas-bg">
+                  <canvas id="bg"></canvas>
+                </div>
+                
+                <div class="content">
+                  <div class="container">
+                    <div class="row">
+                        ${heroStep.map(step => `<h2 class="display-1 w-50 step">${step.title}</h2>`).join('')}
+                    </div
+                  </div
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="marquee"> 
+                <div class="marquee-track">
+                    ${[...marquee, ...marquee].map(i => `
+                        <span>${i.name}</span>
+                        <span>•</span>
+                    `).join('')}
                 </div>
             </div>
         </section>
     `
+}
+
+export function stickyScroll(): void {
+    const story = document.querySelector<HTMLElement>('.hero');
+    const steps = document.querySelectorAll<HTMLElement>('.step');
+
+    if (!story || !steps.length) return;
+
+    window.addEventListener('scroll', () => {
+
+        const rect = story.getBoundingClientRect();
+
+        const progress = Math.min(
+          Math.max(-rect.top / (story.offsetHeight - window.innerHeight), 0),
+          1
+        );
+
+        const index = Math.min(
+          Math.floor(progress * steps.length),
+          steps.length - 1
+        );
+
+        steps.forEach((step, i) => {
+            step.classList.toggle('active', i === index);
+        });
+    });
 }

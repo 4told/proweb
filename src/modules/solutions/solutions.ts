@@ -5,7 +5,7 @@ export function renderWhatWeDo(): string {
         <section class="solutions py-5">
             <div class="container">
                 <div class="row">
-                    <h1 class="fade-up py-4" data-i18="solutions.title"></h1>
+                    <h1 class="display-1 fade-up py-4" data-i18="solutions.title"></h1>
                     <div class="slider">
                         ${solutionsConst.map(solution => `
                             <div class="card fade-up">

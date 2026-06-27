@@ -4,8 +4,13 @@ import {initScrollProgress, initTheme, observer} from './theme'
 import {setLanguage, renderTranslations, initLangDropdown, updateLanguageDropdown} from './i18'
 import {renderLayout} from "./parts";
 import {improveSolutionCard} from "./modules/solutions/solutions.ts";
+import { BackgroundBalls } from './components/BackgroundBalls.ts';
+import { stickyScroll } from './parts/hero.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = renderLayout();
+
+const canvas = document.querySelector("#bg") as HTMLCanvasElement;
+new BackgroundBalls(canvas);
 
 initTheme()
 renderTranslations()
@@ -17,3 +22,5 @@ observer()
 
 improveSolutionCard()
 initScrollProgress()
+
+stickyScroll()
