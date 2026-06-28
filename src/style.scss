@@ -1,6 +1,7 @@
 @use './styles/theme';
 @use './styles/reset';
 @use './styles/animations';
+@use './styles/background-balls';
 @use './modules/solutions/solutions';
 @use './modules/how-it-happens/how-it-happens';
 
@@ -12,6 +13,17 @@ header {
   padding: 5px 10px;
   transition: border-color 0.3s;
   z-index: 9;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -23px;
+    height: 23px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+  }
 
   .inner {
     display: flex;
@@ -98,35 +110,90 @@ header {
     height: 4px;
     z-index: 9999;
     background: linear-gradient(90deg, #4a9eff, #60a5fa);
-
     box-shadow: 0 0 15px rgba(74, 158, 255, 0.5);
     transition: width 0.05s linear;
   }
 }
 
 .hero {
+  height: 400vh;
   position: relative;
-  height: 555px;
-  overflow: hidden;
 
   &:before {
     content: '';
     display: block;
     position: absolute;
-    top: 0;
     bottom: 0;
-    left: 0;
-    width: 50%;
-    backdrop-filter: blur(1px) grayscale(1);
-    background: linear-gradient(90deg, var(--bg) 0%, var(--accent-bg) 100%);
-    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--bg) 0%, transparent 75%);
+    z-index: 999;
   }
 
-  &-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+  .sticky {
+    position: sticky;
+    top: 42px;
+    height: 100vh;
+    overflow: hidden;
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .step {
+        position: absolute;
+        top: 100%;
+        inset: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        opacity: 0;
+        transition:
+          opacity 0.5s,
+          top 0.25s;
+        font-weight: bold;
+
+        &.active {
+          opacity: 1;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  &-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 40px;
+    animation: marquee 25s linear infinite;
+
+    span {
+      white-space: nowrap;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text);
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }
 
