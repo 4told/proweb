@@ -3,7 +3,7 @@ import { renderHero } from './hero.ts';
 import { renderWhatWeDo } from './../modules/solutions/solutions.ts';
 import { renderSelectedWork } from './selected-work.ts';
 import { renderHowItHappens } from '../modules/how-it-happens/how-it-happens.ts';
-import { renderContact } from './contact.ts';
+import { renderContact } from '../modules/contacts/contact.ts';
 import { renderAbout } from './about.ts';
 import { renderFooter } from './footer.ts';
 export function renderLayout() {

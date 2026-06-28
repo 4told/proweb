@@ -1,96 +1,92 @@
-import  {translations} from "./constants/i18.const.ts";
+import { translations } from './constants/i18.const.ts';
 
-export type Lang = keyof typeof translations
+export type Lang = keyof typeof translations;
 
-export let currentLang: Lang =
-    (localStorage.getItem('lang') as Lang) || 'ua'
+export let currentLang: Lang = (localStorage.getItem('lang') as Lang) || 'ua';
 
 export function t(path: string): string {
-    const keys = path.split('.')
+  const keys = path.split('.');
 
-    let value: any = translations[currentLang]
+  let value: any = translations[currentLang];
 
-    for (const key of keys) {
-        value = value?.[key]
-    }
+  for (const key of keys) {
+    value = value?.[key];
+  }
 
-    return typeof value === 'string'
-        ? value
-        : path
+  return typeof value === 'string' ? value : path;
 }
 
 export function renderTranslations() {
-    document.querySelectorAll('[data-i18]').forEach((element) => {
-        const key = element.getAttribute('data-i18')
+  document.querySelectorAll('[data-i18]').forEach((element) => {
+    const key = element.getAttribute('data-i18');
 
-        if (!key) return
+    if (!key) return;
 
-        element.textContent = t(
-            key as keyof typeof translations.ua
-        )
-    })
+    element.textContent = t(key);
+  });
+
+  document
+    .querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement
+    >('[data-i18-placeholder]')
+    .forEach((element) => {
+      const key = element.getAttribute('data-i18-placeholder');
+
+      if (!key) return;
+
+      element.placeholder = t(key);
+    });
 }
 
 export function setLanguage() {
-    document
-        .querySelector('[data-lang="ua"]')
-        ?.addEventListener('click', () => setLang('ua'))
+  document
+    .querySelector('[data-lang="ua"]')
+    ?.addEventListener('click', () => setLang('ua'));
 
-    document
-        .querySelector('[data-lang="ru"]')
-        ?.addEventListener('click', () => setLang('ru'))
+  document
+    .querySelector('[data-lang="ru"]')
+    ?.addEventListener('click', () => setLang('ru'));
 
-    document
-        .querySelector('[data-lang="en"]')
-        ?.addEventListener('click', () => setLang('en'))
-
+  document
+    .querySelector('[data-lang="en"]')
+    ?.addEventListener('click', () => setLang('en'));
 }
 export function setLang(lang: Lang) {
-    currentLang = lang
+  currentLang = lang;
 
-    localStorage.setItem('lang', lang)
+  localStorage.setItem('lang', lang);
 
-    renderTranslations()
-    updateLanguageDropdown()
+  renderTranslations();
+  updateLanguageDropdown();
 
-    document
-        .querySelector('.lang-switcher')
-        ?.classList.remove('open')
+  document.querySelector('.lang-switcher')?.classList.remove('open');
 }
 
 export function updateLanguageDropdown() {
-    const currentLangElement =
-        document.getElementById('current-lang')
+  const currentLangElement = document.getElementById('current-lang');
 
-    currentLangElement!.textContent =
-        currentLang.toUpperCase()
+  currentLangElement!.textContent = currentLang.toUpperCase();
 
-    document
-        .querySelectorAll<HTMLButtonElement>(
-            '.lang-dropdown [data-lang]'
-        )
-        .forEach((button) => {
-            button.style.display =
-                button.dataset.lang === currentLang
-                    ? 'none'
-                    : 'block'
-        })
+  document
+    .querySelectorAll<HTMLButtonElement>('.lang-dropdown [data-lang]')
+    .forEach((button) => {
+      button.style.display =
+        button.dataset.lang === currentLang ? 'none' : 'block';
+    });
 }
 
 export function initLangDropdown() {
-    const switcher =
-        document.querySelector('.lang-switcher')
+  const switcher = document.querySelector('.lang-switcher');
 
-    const current =
-        document.querySelector('.lang-current')
+  const current = document.querySelector('.lang-current');
 
-    current?.addEventListener('click', () => {
-        switcher?.classList.toggle('open')
-    })
+  current?.addEventListener('click', () => {
+    switcher?.classList.toggle('open');
+  });
 
-    document.addEventListener('click', (e) => {
-        if (!switcher?.contains(e.target as Node)) {
-            switcher?.classList.remove('open')
-        }
-    })
+  document.addEventListener('click', (e) => {
+    if (!switcher?.contains(e.target as Node)) {
+      switcher?.classList.remove('open');
+    }
+  });
 }

@@ -12,6 +12,7 @@ import { improveSolutionCard } from './modules/solutions/solutions.ts';
 import { initHowItHappensScroll } from './modules/how-it-happens/how-it-happens';
 import { BackgroundBalls } from './components/BackgroundBalls.ts';
 import { stickyScroll } from './parts/hero.ts';
+import { initContact } from './modules/contacts/contact.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = renderLayout();
 
@@ -26,6 +27,7 @@ initLangDropdown();
 updateLanguageDropdown();
 observer();
 initHowItHappensScroll();
+initContact();
 
 improveSolutionCard();
 initScrollProgress();
