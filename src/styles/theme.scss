@@ -9,11 +9,9 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-          rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  //--heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: Manrope, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
@@ -32,60 +30,55 @@
   }
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   --text: #9ca3af;
   --text-h: #f3f4f6;
   --bg: #16171d;
   --border: #2e303a;
   --code-bg: #1f2028;
-  //--accent: #c084fc;
-  --accent: rgba(74,158,255);
-  //--accent-bg: rgba(192, 132, 252, 0.15);
+  --accent: rgb(74, 158, 255);
   --accent-bg: rgb(89 90 90 / 38%);
-  //--accent-border: rgba(192, 132, 252, 0.5);
   --accent-border: rgba(74, 158, 255, 0.38);
   --social-bg: rgba(47, 48, 58, 0.5);
   --shadow:
-          rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-
-
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./../assets/fonts/Manrope-Light.woff2") format("truetype");
+  font-family: 'Manrope';
+  src: url('./../assets/fonts/Manrope-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./../assets/fonts/Manrope-Regular.woff2") format("truetype");
+  font-family: 'Manrope';
+  src: url('./../assets/fonts/Manrope-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./../assets/fonts/Manrope-Medium.woff2") format("truetype");
+  font-family: 'Manrope';
+  src: url('./../assets/fonts/Manrope-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./../assets/fonts/Manrope-Semibold.woff2") format("truetype");
+  font-family: 'Manrope';
+  src: url('./../assets/fonts/Manrope-Semibold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./../assets/fonts/Manrope-Bold.woff2") format("truetype");
+  font-family: 'Manrope';
+  src: url('./../assets/fonts/Manrope-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;

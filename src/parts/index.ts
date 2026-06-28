@@ -1,13 +1,13 @@
-import {renderHeader} from "./header.ts";
-import {renderHero} from "./hero.ts";
-import {renderWhatWeDo} from "./../modules/solutions/solutions.ts";
-import {renderSelectedWork} from "./selected-work.ts";
-import {renderHowItHappens} from "./how-it-happens.ts";
-import {renderContact} from "./contact.ts";
-import {renderAbout} from "./about.ts";
-import {renderFooter} from "./footer.ts";
+import { renderHeader } from './header.ts';
+import { renderHero } from './hero.ts';
+import { renderWhatWeDo } from './../modules/solutions/solutions.ts';
+import { renderSelectedWork } from './selected-work.ts';
+import { renderHowItHappens } from '../modules/how-it-happens/how-it-happens.ts';
+import { renderContact } from './contact.ts';
+import { renderAbout } from './about.ts';
+import { renderFooter } from './footer.ts';
 export function renderLayout() {
-    return `
+  return `
     ${renderHeader()}
     ${renderHero()}
     ${renderWhatWeDo()}
@@ -16,5 +16,5 @@ export function renderLayout() {
     ${renderContact()}
     ${renderAbout()}
     ${renderFooter()}
-  `
+  `;
 }

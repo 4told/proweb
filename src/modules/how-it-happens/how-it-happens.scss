@@ -1,0 +1,130 @@
+.how-it-happens {
+  --line-vertical: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-border),
+    transparent
+  );
+  --line-horizontal: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-border),
+    transparent
+  );
+
+  background: var(--bg);
+
+  .display-2 {
+    max-width: 620px;
+    color: var(--text-h);
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    @media (max-width: 576px) {
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: var(--bg);
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step {
+    position: relative;
+    min-height: 260px;
+    opacity: 0.35;
+    background-color: transparent;
+    will-change: transform, opacity;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      background-color: var(--accent-bg);
+
+      .number {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 576px) {
+      min-height: auto;
+    }
+  }
+
+  .line-desktop-both {
+    background:
+      var(--line-vertical) right top / 1px 100% no-repeat,
+      var(--line-horizontal) left bottom / 100% 1px no-repeat;
+  }
+
+  .line-desktop-bottom {
+    background: var(--line-horizontal) left bottom / 100% 1px no-repeat;
+  }
+
+  .line-desktop-vertical {
+    background: var(--line-vertical) right top / 1px 100% no-repeat;
+  }
+
+  .line-none {
+    background: none;
+  }
+
+  @media (max-width: 991px) {
+    .line-tablet-both {
+      background:
+        var(--line-vertical) right top / 1px 100% no-repeat,
+        var(--line-horizontal) left bottom / 100% 1px no-repeat;
+    }
+
+    .line-tablet-bottom {
+      background: var(--line-horizontal) left bottom / 100% 1px no-repeat;
+    }
+
+    .line-tablet-vertical {
+      background: var(--line-vertical) right top / 1px 100% no-repeat;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .line-mobile-bottom {
+      background: var(--line-horizontal) left bottom / 100% 1px no-repeat;
+    }
+
+    .line-none {
+      background: none;
+    }
+  }
+
+  .number {
+    color: var(--accent);
+    font: 700 2.875rem/1 var(--heading);
+    opacity: 0.78;
+    transition: opacity 0.25s ease;
+  }
+
+  h3 {
+    text-align: left;
+    color: var(--text-h);
+    font: 700 1.375rem/1.2 var(--heading);
+  }
+
+  .description {
+    max-width: 320px;
+    color: var(--text);
+    font: 400 0.9rem/1.65 var(--sans);
+  }
+}
