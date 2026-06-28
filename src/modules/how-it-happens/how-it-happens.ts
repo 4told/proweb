@@ -1,21 +1,30 @@
 import { howItHappensConst } from '../../constants/how-it-happens.const';
 
+const lineClasses = [
+  'line-desktop-both line-tablet-both line-mobile-bottom',
+  'line-desktop-both line-tablet-bottom line-mobile-bottom',
+  'line-desktop-bottom line-tablet-both line-mobile-bottom',
+  'line-desktop-vertical line-tablet-bottom line-mobile-bottom',
+  'line-desktop-vertical line-tablet-vertical line-mobile-bottom',
+  'line-none',
+];
+
 export function renderHowItHappens(): string {
   return `
 <section class="how-it-happens py-5 mt-5">
   <div class="container">
-    <h2 class="how-it-happens__title fade-up" data-i18="howItHappens.title"></h2>
+    <h2 class="display-2 mx-auto text-center mb-5 fade-up" data-i18="howItHappens.title"></h2>
 
-    <div class="how-it-happens__grid">
+    <div class="grid">
       ${howItHappensConst
         .map(
           (step, index) => `
-            <article class="how-it-happens__step">
-              <span class="how-it-happens__number">
+            <article class="step p-4 p-md-5 ${lineClasses[index]}">
+              <span class="number d-block mb-4">
                 ${String(index + 1).padStart(2, '0')}
               </span>
-              <h3 data-i18="${step.titleKey}"></h3>
-              <p data-i18="${step.descriptionKey}"></p>
+              <h3 class="mb-3" data-i18="${step.titleKey}"></h3>
+              <p class="description m-0" data-i18="${step.descriptionKey}"></p>
             </article>
           `
         )
@@ -27,7 +36,7 @@ export function renderHowItHappens(): string {
 }
 
 export function initHowItHappensScroll(): void {
-  const steps = document.querySelectorAll<HTMLElement>('.how-it-happens__step');
+  const steps = document.querySelectorAll<HTMLElement>('.how-it-happens .step');
 
   if (!steps.length) return;
 
