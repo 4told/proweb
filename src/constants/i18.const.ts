@@ -49,16 +49,21 @@ export const translations = {
 
     contact: {
       title: 'Давай працювати разом',
-      subtitle: 'Розкажи про свій проєкт',
+      subtitle: 'Розкажи про свій проєкт — ми швидко повернемось із рішенням.',
+      button: 'Звʼязатися',
+      privacy: 'Конфіденційність',
+      formTitle: 'Заявка на проєкт',
       name: 'Ваше імʼя',
       email: 'Email',
+      company: 'Компанія',
+      projectType: 'Тип проєкту',
       message: 'Деталі проєкту',
       send: 'Надіслати',
     },
 
     about: {
       title: 'Про нас',
-      text: 'Ми невелика команда...',
+      text: 'Ми невелика команда, яка створює сучасні сайти, інтерфейси та цифрові рішення для бізнесу. Працюємо швидко, прозоро і з фокусом на результат.',
     },
 
     testimonials: {
@@ -116,16 +121,21 @@ export const translations = {
 
     contact: {
       title: 'Давай работать вместе',
-      subtitle: 'Расскажи о своём проекте',
+      subtitle: 'Расскажи о своём проекте — мы быстро вернёмся с решением.',
+      button: 'Связаться',
+      privacy: 'Конфиденциальность',
+      formTitle: 'Заявка на проект',
       name: 'Ваше имя',
       email: 'Email',
+      company: 'Компания',
+      projectType: 'Тип проекта',
       message: 'Детали проекта',
       send: 'Отправить',
     },
 
     about: {
       title: 'О нас',
-      text: 'Мы небольшая команда, создающая современные веб-решения, UI/UX и производительные продукты.',
+      text: 'Мы небольшая команда, которая создаёт современные сайты, интерфейсы и цифровые решения для бизнеса. Работаем быстро, прозрачно и с фокусом на результат.',
     },
 
     testimonials: {
@@ -183,16 +193,22 @@ export const translations = {
 
     contact: {
       title: "Let's work together",
-      subtitle: 'Tell us about your project',
+      subtitle:
+        "Tell us about your project and we'll get back with a solution.",
+      button: 'Contact',
+      privacy: 'Privacy & Terms',
+      formTitle: 'Request an Invite',
       name: 'Your name',
-      email: 'Email',
+      email: 'Work email',
+      company: 'Company',
+      projectType: 'Project type',
       message: 'Project details',
-      send: 'Send message',
+      send: 'Send request',
     },
 
     about: {
       title: 'About us',
-      text: 'We are a small development team focused on modern web solutions, UI/UX and performance-driven products.',
+      text: 'We are a small team creating modern websites, interfaces, and digital solutions for businesses. We work fast, transparently, and with a clear focus on results.',
     },
 
     testimonials: {
