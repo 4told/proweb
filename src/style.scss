@@ -5,6 +5,7 @@
 @use './modules/solutions/solutions';
 @use './modules/how-it-happens/how-it-happens';
 @use './modules/contacts/contact';
+@use './modules/selected-works/selected-work';
 
 header {
   position: sticky;
@@ -153,7 +154,7 @@ header {
         transition:
           opacity 0.5s,
           top 0.25s;
-        transition-delay: .1s ;
+        transition-delay: 0.1s;
         font-weight: bold;
 
         &.active {
@@ -196,69 +197,5 @@ header {
 
   to {
     transform: translateX(-50%);
-  }
-}
-
-/* =========================
-   VLAD SECTION
-========================= */
-
-.selected-work {
-  .card {
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border);
-    transition:
-      transform 0.25s ease,
-      box-shadow 0.25s ease,
-      border-color 0.25s ease;
-
-    &:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-      border-color: var(--accent-border);
-    }
-  }
-}
-
-//todo move to own module
-.odometer-wrap {
-  text-align: center;
-  color: var(--accent);
-}
-
-.odometer {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1;
-  overflow: hidden;
-
-
-  &-digit {
-    height: 1em;
-    width: .7em;
-
-    overflow: hidden;
-  }
-
-  &-track {
-    display: flex;
-    flex-direction: column;
-
-    will-change: transform;
-    transition: transform 2s cubic-bezier(.19, 1, .22, 1);
-  }
-
-  &-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 1em;
-    color: var(--accent);
   }
 }

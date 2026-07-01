@@ -9,40 +9,71 @@ export const translations = {
 
     selectedWork: {
       title: 'Обрані роботи',
+      items: {
+        melius: {
+          title: 'Melius',
+          category: 'Будівництво • E-commerce',
+        },
+        dniproNews: {
+          title: 'DniproNews',
+          category: 'Медіа • Новинний портал',
+        },
+        gangBeton: {
+          title: 'Gang Beton',
+          category: 'Будівництво • Корпоративний сайт',
+        },
+        aptekaOnline: {
+          title: 'Apteka Online',
+          category: 'Медицина • E-commerce',
+        },
+        beautifullyBlessed: {
+          title: 'Beautifully Blessed',
+          category: 'Краса • Лендінг',
+        },
+        elgato: {
+          title: 'Elgato Communications',
+          category: 'Телеком • Корпоративний сайт',
+        },
+        dts: {
+          title: 'DTS',
+          category: 'Інтернет-послуги • Корпоративний сайт',
+        },
+        atlas: {
+          title: 'Atlas',
+          category: 'Телеком • Корпоративний сайт',
+        },
+      },
     },
 
     howItHappens: {
       title: 'Як це відбувається',
       steps: {
         strategy: {
-          title: 'Стратегія бренду',
-          description:
-            'Вивчаємо бізнес, аудиторію та конкурентів, щоб сформувати чітку позицію і сильну основу для проєкту.',
+          title: 'Дослідження',
+          description: 'Вивчаємо ваш бізнес, ринок і цілі проєкту.',
         },
         identity: {
-          title: 'Візуальна айдентика',
-          description:
-            'Створюємо стиль, кольори, типографіку та візуальну систему, яка робить бренд впізнаваним.',
+          title: 'Концепція',
+          description: 'Плануємо взаємодію, структуру та творчий напрямок.',
         },
         experience: {
-          title: 'Цифровий досвід',
+          title: 'Дизайн',
           description:
-            'Проєктуємо сайт або інтерфейс так, щоб користувач швидко розумів цінність і легко рухався до дії.',
+            'Створюємо сучасний інтерфейс із фокусом на зручність використання та естетику.',
         },
         campaign: {
-          title: 'Контент і запуск',
+          title: 'Розробка',
           description:
-            'Готуємо структуру, тексти, візуали та сценарії запуску, щоб проєкт виглядав цілісно з першого дня.',
+            'Розробляємо швидкий, масштабований та адаптивний цифровий продукт.',
         },
         motion: {
-          title: 'Анімації та деталі',
-          description:
-            'Додаємо плавні переходи, hover-ефекти та мікровзаємодії, які роблять інтерфейс живим.',
+          title: 'Запуск',
+          description: 'Тестуємо, вдосконалюємо та успішно запускаємо проєкт.',
         },
         spatial: {
-          title: 'Підтримка і розвиток',
+          title: 'Розвиток',
           description:
-            'Після запуску допомагаємо покращувати продукт, додавати нові блоки й адаптувати його під задачі бізнесу.',
+            'Постійно вдосконалюємо продукт на основі реальних даних користувачів і зростання бізнесу.',
         },
       },
     },
@@ -81,40 +112,72 @@ export const translations = {
 
     selectedWork: {
       title: 'Избранные работы',
+      items: {
+        melius: {
+          title: 'Melius',
+          category: 'Строительство • E-commerce',
+        },
+        dniproNews: {
+          title: 'DniproNews',
+          category: 'Медиа • Новостной портал',
+        },
+        gangBeton: {
+          title: 'Gang Beton',
+          category: 'Строительство • Корпоративный сайт',
+        },
+        aptekaOnline: {
+          title: 'Apteka Online',
+          category: 'Медицина • E-commerce',
+        },
+        beautifullyBlessed: {
+          title: 'Beautifully Blessed',
+          category: 'Красота • Лендинг',
+        },
+        elgato: {
+          title: 'Elgato Communications',
+          category: 'Телеком • Корпоративный сайт',
+        },
+        dts: {
+          title: 'DTS',
+          category: 'Интернет-услуги • Корпоративный сайт',
+        },
+        atlas: {
+          title: 'Atlas',
+          category: 'Телеком • Корпоративный сайт',
+        },
+      },
     },
 
     howItHappens: {
       title: 'Как это происходит',
       steps: {
         strategy: {
-          title: 'Стратегия бренда',
-          description:
-            'Изучаем бизнес, аудиторию и конкурентов, чтобы сформировать чёткую позицию и сильную основу проекта.',
+          title: 'Исследование',
+          description: 'Изучаем ваш бизнес, рынок и цели проекта.',
         },
         identity: {
-          title: 'Визуальная айдентика',
+          title: 'Концепция',
           description:
-            'Создаём стиль, цвета, типографику и визуальную систему, которая делает бренд узнаваемым.',
+            'Планируем взаимодействие, структуру и творческое направление.',
         },
         experience: {
-          title: 'Цифровой опыт',
+          title: 'Дизайн',
           description:
-            'Проектируем сайт или интерфейс так, чтобы пользователь быстро понимал ценность и легко двигался к действию.',
+            'Создаём современный интерфейс с акцентом на удобство использования и эстетику.',
         },
         campaign: {
-          title: 'Контент и запуск',
+          title: 'Разработка',
           description:
-            'Готовим структуру, тексты, визуалы и сценарии запуска, чтобы проект выглядел цельно с первого дня.',
+            'Разрабатываем быстрый, масштабируемый и адаптивный цифровой продукт.',
         },
         motion: {
-          title: 'Анимации и детали',
-          description:
-            'Добавляем плавные переходы, hover-эффекты и микровзаимодействия, которые делают интерфейс живым.',
+          title: 'Запуск',
+          description: 'Тестируем, дорабатываем и успешно запускаем проект.',
         },
         spatial: {
-          title: 'Поддержка и развитие',
+          title: 'Развитие',
           description:
-            'После запуска помогаем улучшать продукт, добавлять новые блоки и адаптировать его под задачи бизнеса.',
+            'Постоянно совершенствуем продукт на основе реальных данных пользователей и роста бизнеса.',
         },
       },
     },
@@ -153,40 +216,72 @@ export const translations = {
 
     selectedWork: {
       title: 'Selected work',
+      items: {
+        melius: {
+          title: 'Melius',
+          category: 'Construction • E-commerce',
+        },
+        dniproNews: {
+          title: 'DniproNews',
+          category: 'Media • News Portal',
+        },
+        gangBeton: {
+          title: 'Gang Beton',
+          category: 'Construction • Corporate Website',
+        },
+        aptekaOnline: {
+          title: 'Apteka Online',
+          category: 'Healthcare • E-commerce',
+        },
+        beautifullyBlessed: {
+          title: 'Beautifully Blessed',
+          category: 'Beauty • Landing Page',
+        },
+        elgato: {
+          title: 'Elgato Communications',
+          category: 'Telecommunications • Corporate Website',
+        },
+        dts: {
+          title: 'DTS',
+          category: 'Internet Services • Corporate Website',
+        },
+        atlas: {
+          title: 'Atlas',
+          category: 'Telecommunications • Corporate Website',
+        },
+      },
     },
 
     howItHappens: {
       title: 'How it happens',
       steps: {
         strategy: {
-          title: 'Brand Strategy',
-          description:
-            'We study the business, audience, and competitors to define a clear position and a strong project foundation.',
+          title: 'Research',
+          description: 'Understanding your business, market, and objectives.',
         },
         identity: {
-          title: 'Visual Identity',
+          title: 'Concept',
           description:
-            'We create style, colors, typography, and a visual system that makes the brand recognizable.',
+            'Planning the experience, structure, and creative direction.',
         },
         experience: {
-          title: 'Digital Experience',
+          title: 'Design',
           description:
-            'We design the website or interface so users quickly understand the value and move smoothly toward action.',
+            'Crafting a distinctive interface focused on usability and aesthetics.',
         },
         campaign: {
-          title: 'Content & Launch',
+          title: 'Build',
           description:
-            'We prepare structure, copy, visuals, and launch scenarios so the project feels complete from day one.',
+            'Developing a fast, scalable, and responsive digital product.',
         },
         motion: {
-          title: 'Motion & Details',
-          description:
-            'We add smooth transitions, hover effects, and micro-interactions that make the interface feel alive.',
+          title: 'Launch',
+          description: 'Testing, refining, and deploying everything smoothly.',
         },
         spatial: {
-          title: 'Support & Growth',
+          title: 'Evolve',
           description:
-            'After launch, we help improve the product, add new sections, and adapt it to business goals.',
+            'Continuous improvements based on real user data and business growth.',
         },
       },
     },

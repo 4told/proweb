@@ -2,11 +2,11 @@ export function renderContact(): string {
   return `
 <section class="contact py-5">
   <div class="container">
-    <div class="inner d-flex flex-column justify-content-center">
-      <div class="content">
-        <h2 class="display-3 mb-4 fade-up" data-i18="contact.title"></h2>
+    <div class="row min-vh-100 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="display-3 text-heading lh-1 mb-4 fade-up" data-i18="contact.title"></h2>
 
-        <p class="lead mb-4 fade-up" data-i18="contact.subtitle"></p>
+        <p class="lead text-body mb-4 fade-up" data-i18="contact.subtitle"></p>
 
         <button class="btn contact-open px-4 py-3 fade-up" type="button" data-i18="contact.button"></button>
       </div>
@@ -14,12 +14,12 @@ export function renderContact(): string {
   </div>
 
   <div class="modal" aria-hidden="true">
-    <div class="panel">
+    <div class="panel w-100 h-100 p-4 p-md-5">
       <button class="close" type="button" aria-label="Close">×</button>
 
-      <h2 class="display-6 mb-5" data-i18="contact.formTitle"></h2>
+      <h2 class="display-6 text-heading mb-5" data-i18="contact.formTitle"></h2>
 
-      <form>
+      <form class="form">
         <input type="text" data-i18-placeholder="contact.name" />
         <input type="email" data-i18-placeholder="contact.email" />
         <input type="text" data-i18-placeholder="contact.company" />
@@ -51,9 +51,11 @@ export function initContact(): void {
   const closeModal = (): void => {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  };
 
+    setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 600);
+  };
   openBtn.addEventListener('click', openModal);
   closeBtn.addEventListener('click', closeModal);
 

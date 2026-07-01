@@ -14,13 +14,14 @@ import { BackgroundBalls } from './components/BackgroundBalls.ts';
 import { Odometer } from './components/odometr.ts';
 import { stickyScroll } from './parts/hero.ts';
 import { initContact } from './modules/contacts/contact.ts';
+import { initSelectedWorkScroll } from './modules/selected-works/selected-work.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = renderLayout();
 
 const canvas = document.querySelector('#bg') as HTMLCanvasElement;
 new BackgroundBalls(canvas);
 
-document.querySelectorAll<HTMLElement>(".odometer").forEach((el) => {
+document.querySelectorAll<HTMLElement>('.odometer').forEach((el) => {
   new Odometer(el);
 });
 
@@ -32,10 +33,10 @@ initLangDropdown();
 updateLanguageDropdown();
 observer();
 initHowItHappensScroll();
+initSelectedWorkScroll();
 initContact();
 
 improveSolutionCard();
 initScrollProgress();
 
 stickyScroll();
-
