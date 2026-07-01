@@ -153,6 +153,7 @@ header {
         transition:
           opacity 0.5s,
           top 0.25s;
+        transition-delay: .1s ;
         font-weight: bold;
 
         &.active {
@@ -217,5 +218,47 @@ header {
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
       border-color: var(--accent-border);
     }
+  }
+}
+
+//todo move to own module
+.odometer-wrap {
+  text-align: center;
+  color: var(--accent);
+}
+
+.odometer {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+
+
+  &-digit {
+    height: 1em;
+    width: .7em;
+
+    overflow: hidden;
+  }
+
+  &-track {
+    display: flex;
+    flex-direction: column;
+
+    will-change: transform;
+    transition: transform 2s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  &-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1em;
+    color: var(--accent);
   }
 }

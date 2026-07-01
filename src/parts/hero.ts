@@ -1,11 +1,21 @@
 const marquee = [
     {name: 'Scroll Animations'},
-    {name: '3D Experiences'},
-    {name: 'Motion Design'},
-    {name: 'WebGL'},
+    {name: 'Mobile'},
+    {name: 'Angular'},
+    {name: 'React'},
     {name: 'Responsive'},
-    {name: '60fps'},
+    {name: 'E-Commerce'},
+    {name: 'WordPress'},
+    {name: 'PrestaShop'},
+    {name: 'MapBox Maps API'},
+    {name: 'Google Maps'},
+    {name: 'E-Charts'},
+    {name: 'Analytics 4'},
+    {name: 'AdSense'},
+    {name: 'SEO'},
+    {name: 'Dashboards'},
 
+  //todo add another items
 ];
 
 const heroStep = [
@@ -21,11 +31,10 @@ export function renderHero(): string {
                 <div class="canvas-bg">
                   <canvas id="bg"></canvas>
                 </div>
-                
                 <div class="content">
                   <div class="container">
                     <div class="row">
-                        ${heroStep.map(step => `<h2 class="display-1 w-50 step">${step.title}</h2>`).join('')}
+                        ${heroStep.map((step, index) => `<h2 class="display-1 w-50 step ${index === 0 ? 'active' : ''}">${step.title}</h2>`).join('')}
                     </div
                   </div
                 </div>

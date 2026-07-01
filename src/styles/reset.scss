@@ -35,6 +35,7 @@ h2 {
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
@@ -42,6 +43,10 @@ h2 {
 
 h3 {
   text-align: center;
+  color: var(--text);
+}
+
+h4 {
   color: var(--text);
 }
 
