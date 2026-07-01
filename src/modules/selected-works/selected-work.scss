@@ -1,0 +1,173 @@
+.selected-work {
+  background: var(--bg);
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem 1.5rem;
+
+    &:hover {
+      .work-card {
+        opacity: 0.72;
+        transform: scale(0.985);
+      }
+
+      .work-card:hover {
+        opacity: 1;
+        transform: scale(1.025);
+        z-index: 2;
+      }
+    }
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .work-card {
+    grid-column: span 2;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    &.wide {
+      grid-column: span 4;
+    }
+
+    &.large {
+      grid-column: span 4;
+    }
+
+    @media (max-width: 991px) {
+      grid-column: span 1;
+
+      &.wide,
+      &.large {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 576px) {
+      grid-column: span 1;
+
+      &.wide,
+      &.large {
+        grid-column: span 1;
+      }
+    }
+
+    &:hover {
+      .preview {
+        border-color: var(--accent-border);
+      }
+
+      img {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 220px;
+    overflow: hidden;
+
+    border: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
+    border-radius: 18px;
+
+    background: color-mix(in srgb, var(--bg) 92%, var(--accent) 8%);
+
+    transition: border-color 0.25s ease;
+
+    @media (max-width: 576px) {
+      height: 200px;
+    }
+  }
+
+  .wide .preview,
+  .large .preview {
+    height: 260px;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 78%;
+    max-height: 68%;
+    object-fit: contain;
+
+    transition: transform 0.35s ease;
+  }
+
+  .wide img,
+  .large img {
+    max-width: 82%;
+    max-height: 70%;
+  }
+
+  .info {
+    margin-top: 1rem;
+    text-align: left;
+
+    h3,
+    p {
+      text-align: left;
+    }
+
+    h3 {
+      margin-bottom: 0.25rem;
+      color: var(--text-h);
+      font: 700 1.1rem/1.25 var(--heading);
+    }
+
+    p {
+      margin: 0;
+      color: var(--text);
+      font: 400 0.9rem/1.45 var(--sans);
+    }
+  }
+}
+
+.selected-stats {
+  .odometer-wrap {
+    color: var(--accent);
+  }
+
+  .odometer {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    overflow: hidden;
+
+    color: var(--accent);
+    font: 700 4rem/1 var(--heading);
+
+    &-digit {
+      width: 0.7em;
+      height: 1em;
+      overflow: hidden;
+    }
+
+    &-track {
+      display: flex;
+      flex-direction: column;
+      will-change: transform;
+      transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    &-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1em;
+    }
+  }
+}
