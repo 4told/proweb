@@ -14,7 +14,7 @@ import { BackgroundBalls } from './components/BackgroundBalls.ts';
 import { Odometer } from './components/odometr.ts';
 import { stickyScroll } from './parts/hero.ts';
 import { initContact } from './modules/contacts/contact.ts';
-import { initSelectedWorkScroll } from './modules/selected-works/selected-work.ts';
+import { initSelectedWorkHorizontalScroll } from './modules/selected-works/selected-work.ts';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = renderLayout();
 
@@ -33,7 +33,7 @@ initLangDropdown();
 updateLanguageDropdown();
 observer();
 initHowItHappensScroll();
-initSelectedWorkScroll();
+initSelectedWorkHorizontalScroll();
 initContact();
 
 improveSolutionCard();

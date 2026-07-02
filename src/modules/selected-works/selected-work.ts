@@ -9,20 +9,22 @@ export function renderSelectedWork(): string {
         <h2 class="display-2 text-heading lh-1 fade-up" data-i18="selectedWork.title"></h2>
       </div>
     </div>
+  </div>
 
-    <div class="works-grid">
+  <div class="works-scroll fade-up">
+    <div class="works-track">
       ${selectedWorksConst
         .map(
           (work) => `
-            <article class="work-card ${work.size || ''} fade-up">
+            <article class="work-card">
               <div class="preview">
                 <img src="${work.image}" alt="project" loading="lazy" />
               </div>
 
-             <div class="info">
-  <h3 data-i18="${work.titleKey}"></h3>
-  <p data-i18="${work.categoryKey}"></p>
-</div>
+              <div class="info">
+                <h3 data-i18="${work.titleKey}"></h3>
+                <p data-i18="${work.categoryKey}"></p>
+              </div>
             </article>
           `
         )
@@ -54,41 +56,42 @@ export function renderSelectedWork(): string {
 `;
 }
 
-export function initSelectedWorkScroll(): void {
-  const cards = document.querySelectorAll<HTMLElement>(
-    '.selected-work .work-card'
+export function initSelectedWorkHorizontalScroll(): void {
+  const section = document.querySelector<HTMLElement>('.selected-work');
+  const scroll = document.querySelector<HTMLElement>(
+    '.selected-work .works-scroll'
   );
 
-  if (!cards.length) return;
+  if (!section || !scroll) return;
 
-  const clamp = (value: number, min: number, max: number): number =>
-    Math.min(Math.max(value, min), max);
-
-  const update = (): void => {
+  const isSectionActive = (): boolean => {
+    const rect = section.getBoundingClientRect();
     const viewportCenter = window.innerHeight / 2;
 
-    cards.forEach((card, index) => {
-      const rect = card.getBoundingClientRect();
-      const cardCenter = rect.top + rect.height / 2;
-      const distance = Math.abs(viewportCenter - cardCenter);
-
-      const maxDistance = window.innerHeight * 0.65;
-      const progress = 1 - clamp(distance / maxDistance, 0, 1);
-
-      const delay = index * 0.015;
-      const easedProgress = clamp(progress - delay, 0, 1);
-
-      const y = 34 * (1 - easedProgress);
-      const scale = 0.97 + 0.03 * easedProgress;
-      const opacity = 0.35 + 0.65 * easedProgress;
-
-      card.style.transform = `translate3d(0, ${y}px, 0) scale(${scale})`;
-      card.style.opacity = String(opacity);
-    });
+    return rect.top < viewportCenter && rect.bottom > viewportCenter;
   };
 
-  window.addEventListener('scroll', update);
-  window.addEventListener('resize', update);
+  scroll.addEventListener(
+    'wheel',
+    (event) => {
+      const canScrollHorizontally = scroll.scrollWidth > scroll.clientWidth;
 
-  update();
+      if (!canScrollHorizontally || !isSectionActive()) return;
+
+      const isScrollingDown = event.deltaY > 0;
+      const isScrollingUp = event.deltaY < 0;
+
+      const isAtStart = scroll.scrollLeft <= 0;
+      const isAtEnd =
+        Math.ceil(scroll.scrollLeft + scroll.clientWidth) >= scroll.scrollWidth;
+
+      if ((isScrollingUp && isAtStart) || (isScrollingDown && isAtEnd)) {
+        return;
+      }
+
+      event.preventDefault();
+      scroll.scrollLeft += event.deltaY * 1.25;
+    },
+    { passive: false }
+  );
 }

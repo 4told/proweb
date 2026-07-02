@@ -1,11 +1,11 @@
-import work1 from '../assets/images/our-works/1.webp';
-import work2 from '../assets/images/our-works/2.png';
-import work3 from '../assets/images/our-works/3.png';
-import work4 from '../assets/images/our-works/4.svg';
-import work5 from '../assets/images/our-works/5.avif';
-import work6 from '../assets/images/our-works/6.jpg';
-import work7 from '../assets/images/our-works/7.png';
-import work8 from '../assets/images/our-works/8.png';
+import apteka from '../assets/images/selected-works/Apteka.png';
+import atlas from '../assets/images/selected-works/Atlas.png';
+import beautifullyBlessed from '../assets/images/selected-works/BeautifullyBlessed.png';
+import dniproNews from '../assets/images/selected-works/DniproNews.png';
+import dts from '../assets/images/selected-works/DTS.png';
+import elgato from '../assets/images/selected-works/Elgato.png';
+import gangBeton from '../assets/images/selected-works/GangBeton.png';
+import melius from '../assets/images/selected-works/Melius.png';
 
 export interface ISelectedWork {
   titleKey: string;
@@ -18,45 +18,45 @@ export const selectedWorksConst: ISelectedWork[] = [
   {
     titleKey: 'selectedWork.items.melius.title',
     categoryKey: 'selectedWork.items.melius.category',
-    image: work1,
+    image: melius,
     size: 'wide',
   },
   {
     titleKey: 'selectedWork.items.dniproNews.title',
     categoryKey: 'selectedWork.items.dniproNews.category',
-    image: work2,
+    image: dniproNews,
   },
   {
     titleKey: 'selectedWork.items.gangBeton.title',
     categoryKey: 'selectedWork.items.gangBeton.category',
-    image: work3,
-    size: 'large',
+    image: gangBeton,
+    size: 'wide',
   },
   {
     titleKey: 'selectedWork.items.aptekaOnline.title',
     categoryKey: 'selectedWork.items.aptekaOnline.category',
-    image: work4,
+    image: apteka,
   },
   {
     titleKey: 'selectedWork.items.beautifullyBlessed.title',
     categoryKey: 'selectedWork.items.beautifullyBlessed.category',
-    image: work5,
+    image: beautifullyBlessed,
   },
   {
     titleKey: 'selectedWork.items.elgato.title',
     categoryKey: 'selectedWork.items.elgato.category',
-    image: work6,
+    image: elgato,
     size: 'wide',
   },
   {
     titleKey: 'selectedWork.items.dts.title',
     categoryKey: 'selectedWork.items.dts.category',
-    image: work7,
+    image: dts,
   },
   {
     titleKey: 'selectedWork.items.atlas.title',
     categoryKey: 'selectedWork.items.atlas.category',
-    image: work8,
+    image: atlas,
     size: 'wide',
   },
 ];
