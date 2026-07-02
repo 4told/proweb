@@ -34,9 +34,9 @@ export function renderHero(): string {
                 <div class="content">
                   <div class="container">
                     <div class="row">
-                        ${heroStep.map((step, index) => `<h2 class="display-1 w-50 step ${index === 0 ? 'active' : ''}">${step.title}</h2>`).join('')}
-                    </div
-                  </div
+                        ${heroStep.map((step, index) => `<h2 class="display-1 col-xs-12 col-md-6 step ${index === 0 ? 'active' : ''}">${step.title}</h2>`).join('')}
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -54,27 +54,28 @@ export function renderHero(): string {
 }
 
 export function stickyScroll(): void {
-    const story = document.querySelector<HTMLElement>('.hero');
-    const steps = document.querySelectorAll<HTMLElement>('.step');
+    const hero = document.querySelector<HTMLElement>('.hero');
+    const steps = Array.from(document.querySelectorAll<HTMLElement>('.step'));
 
-    if (!story || !steps.length) return;
+    if (!hero || !steps.length) return;
 
-    window.addEventListener('scroll', () => {
+    const update = () => {
+        const rect = hero.getBoundingClientRect();
+        const scrollable = hero.offsetHeight - window.innerHeight;
 
-        const rect = story.getBoundingClientRect();
+        if (scrollable <= 0) return;
 
-        const progress = Math.min(
-          Math.max(-rect.top / (story.offsetHeight - window.innerHeight), 0),
-          1
-        );
+        const scrolled = Math.min(Math.max(-rect.top, 0), scrollable);
 
-        const index = Math.min(
-          Math.floor(progress * steps.length),
-          steps.length - 1
-        );
+        let index = Math.round(scrolled / window.innerHeight);
+        index = Math.max(0, Math.min(index, steps.length - 1));
 
         steps.forEach((step, i) => {
             step.classList.toggle('active', i === index);
         });
-    });
+    };
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
 }
