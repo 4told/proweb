@@ -1,3 +1,4 @@
+@use './styles/media';
 @use './styles/theme';
 @use './styles/reset';
 @use './styles/animations';
@@ -33,6 +34,7 @@ header {
 
     nav {
       display: flex;
+      display: none; //todo
       gap: 12px;
 
       a {
@@ -117,7 +119,7 @@ header {
 }
 
 .hero {
-  height: 400vh;
+  height: 320vh;
   position: relative;
 
   &:before {
@@ -129,6 +131,7 @@ header {
     height: 100px;
     background: linear-gradient(to top, var(--bg) 0%, transparent 75%);
     z-index: 999;
+    pointer-events: none;
   }
 
   .sticky {
@@ -144,8 +147,8 @@ header {
 
       .step {
         position: absolute;
-        top: 100%;
         inset: 0;
+        top: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;

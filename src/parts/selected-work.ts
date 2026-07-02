@@ -25,15 +25,15 @@ export function renderSelectedWork() {
       <section class="py-4 my-4"> 
         <div class="container">
           <div class="row">
-            <div class="odometer-wrap col-md-4 col-xs-12 fade-up" >
+            <div class="odometer-wrap col-md-4 col-xs-12 mb-5 fade-up" >
               <div class="odometer mb-4" data-value="50+"></div>
               <h4 class="display-6">Реализовано проектов</h4>
             </div>
-            <div class="odometer-wrap col-md-4 col-xs-12 fade-up" >
+            <div class="odometer-wrap col-md-4 col-xs-12 mb-5 fade-up" >
               <div class="odometer mb-4" data-value="10"></div>
               <h4 class="display-6">Постоянных клиентов</h4>
             </div>
-            <div class="odometer-wrap col-md-4 col-xs-12 fade-up">
+            <div class="odometer-wrap col-md-4 col-xs-12 mb-5 fade-up">
               <div class="odometer mb-4" data-value="15"></div>
               <h4 class="display-6">Лет опыта</h4>
             </div>
