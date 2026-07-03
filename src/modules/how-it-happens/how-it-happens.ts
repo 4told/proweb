@@ -11,24 +11,25 @@ const lineClasses = [
 
 export function renderHowItHappens(): string {
   return `
-<section class="how-it-happens py-5 mt-5">
+<section class="how-it-happens py-5">
   <div class="container">
-    <h2 class="display-2 mx-auto text-center mb-5 fade-up" data-i18="howItHappens.title"></h2>
-
-    <div class="grid">
-      ${howItHappensConst
-        .map(
-          (step, index) => `
-            <article class="step p-4 p-md-5 ${lineClasses[index]}">
-              <span class="number d-block mb-4">
-                ${String(index + 1).padStart(2, '0')}
-              </span>
-              <h3 class="mb-3" data-i18="${step.titleKey}"></h3>
-              <p class="description m-0" data-i18="${step.descriptionKey}"></p>
-            </article>
-          `
-        )
-        .join('')}
+    <div class="row">
+      <h2 class="display-1 py-4 fade-up" data-i18="howItHappens.title"></h2>
+      <div class="grid">
+        ${howItHappensConst
+          .map(
+            (step, index) => `
+              <article class="step p-4 p-md-5 ${lineClasses[index]}">
+                <span class="number d-block mb-4">
+                  ${String(index + 1).padStart(2, '0')}
+                </span>
+                <h3 class="mb-3" data-i18="${step.titleKey}"></h3>
+                <p class="description m-0" data-i18="${step.descriptionKey}"></p>
+              </article>
+            `
+          )
+          .join('')}
+      </div>
     </div>
   </div>
 </section>

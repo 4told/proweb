@@ -4,10 +4,8 @@ export function renderSelectedWork(): string {
   return `
 <section class="selected-work py-5">
   <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-8 text-center">
-        <h2 class="display-2 text-heading lh-1 fade-up" data-i18="selectedWork.title"></h2>
-      </div>
+    <div class="row">
+      <h2 class="display-1 py-4 fade-up" data-i18="selectedWork.title"></h2>
     </div>
   </div>
 
@@ -35,20 +33,20 @@ export function renderSelectedWork(): string {
 
 <section class="selected-stats py-5">
   <div class="container">
-    <div class="row g-4 text-center">
+    <div class="row">
       <div class="odometer-wrap col-12 col-md-4 fade-up">
         <div class="odometer mb-4" data-value="50+"></div>
-        <h4 class="display-6">Реализовано проектов</h4>
+        <h4 class="display-6">Реалізовано проектів</h4>
       </div>
 
       <div class="odometer-wrap col-12 col-md-4 fade-up">
         <div class="odometer mb-4" data-value="10"></div>
-        <h4 class="display-6">Постоянных клиентов</h4>
+        <h4 class="display-6">Постійних клиентів</h4>
       </div>
 
       <div class="odometer-wrap col-12 col-md-4 fade-up">
         <div class="odometer mb-4" data-value="15"></div>
-        <h4 class="display-6">Лет опыта</h4>
+        <h4 class="display-6">Років Досвіду</h4>
       </div>
     </div>
   </div>

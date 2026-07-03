@@ -1,6 +1,10 @@
 export const translations = {
   ua: {
-    heroTitle: 'Починаємо Влад )',
+    hero: {
+      title1: 'Ми робимо бренди, які неможливо ігнорувати',
+      title2: 'Ми створюємо сайти, що надихають на дії',
+      title3: 'Давайте створимо щось легендарне разом',
+    },
     contacts: 'Контакти',
 
     solutions: {
@@ -86,8 +90,7 @@ export const translations = {
       formTitle: 'Заявка на проєкт',
       name: 'Ваше імʼя',
       email: 'Email',
-      company: 'Компанія',
-      projectType: 'Тип проєкту',
+      phone: 'Телефон',
       message: 'Деталі проєкту',
       send: 'Надіслати',
     },
@@ -103,7 +106,11 @@ export const translations = {
   },
 
   ru: {
-    heroTitle: 'Начинаем Влад )',
+    hero: {
+      title1: 'Мы делаем бренды, которые невозможно игнорировать',
+      title2: 'Мы создаём сайты, которые вдохновляют на действия',
+      title3: 'Давайте создадим нечто легендарное',
+    },
     contacts: 'Контакты',
 
     solutions: {
@@ -190,8 +197,7 @@ export const translations = {
       formTitle: 'Заявка на проект',
       name: 'Ваше имя',
       email: 'Email',
-      company: 'Компания',
-      projectType: 'Тип проекта',
+      phone: 'Телефон',
       message: 'Детали проекта',
       send: 'Отправить',
     },
@@ -207,7 +213,11 @@ export const translations = {
   },
 
   en: {
-    heroTitle: 'Get started Vlad )',
+    hero: {
+      title1: 'We Make Brands Impossible To Ignore',
+      title2: 'We build web sites that move.',
+      title3: 'Let\'s Build Something Legendary',
+    },
     contacts: 'Contacts',
 
     solutions: {
@@ -295,8 +305,7 @@ export const translations = {
       formTitle: 'Request an Invite',
       name: 'Your name',
       email: 'Work email',
-      company: 'Company',
-      projectType: 'Project type',
+      phone: 'Phone',
       message: 'Project details',
       send: 'Send request',
     },

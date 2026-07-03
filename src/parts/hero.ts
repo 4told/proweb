@@ -19,9 +19,9 @@ const marquee = [
 ];
 
 const heroStep = [
-    {title: 'We Make Brands \n  Impossible \n   To Ignore'},
-    {title: 'We build\n   web sites\n that move.'},
-    {title: ' Let\'s Build\n Something\n Legendary'},
+    {title: 'hero.title1'},
+    {title: 'hero.title2'},
+    {title: 'hero.title3'},
 ];
 
 export function renderHero(): string {
@@ -34,7 +34,7 @@ export function renderHero(): string {
                 <div class="content">
                   <div class="container">
                     <div class="row">
-                        ${heroStep.map((step, index) => `<h2 class="display-1 col-xs-12 col-md-6 step ${index === 0 ? 'active' : ''}">${step.title}</h2>`).join('')}
+                        ${heroStep.map((step, index) => `<h1 class="display-1 col-xs-12 col-md-6 lh-1 step ${index === 0 ? 'active' : ''}" data-i18="${step.title}"></h1>`).join('')}
                     </div>
                   </div>
                 </div>

@@ -1,13 +1,11 @@
 export function renderContact(): string {
   return `
-<section class="contact py-5">
+<section class="contact py-5 min-vh-100">
   <div class="container">
-    <div class="row min-vh-100 align-items-center">
+    <div class="row">
       <div class="col-lg-6">
-        <h2 class="display-3 text-heading lh-1 mb-4 fade-up" data-i18="contact.title"></h2>
-
-        <p class="lead text-body mb-4 fade-up" data-i18="contact.subtitle"></p>
-
+        <h2 class="display-1 py-4 fade-up" data-i18="contact.title"></h2>
+        <p class="lead mb-4 fade-up" data-i18="contact.subtitle"></p>
         <button class="btn contact-open px-4 py-3 fade-up" type="button" data-i18="contact.button"></button>
       </div>
     </div>
@@ -17,13 +15,12 @@ export function renderContact(): string {
     <div class="panel w-100 h-100 p-4 p-md-5">
       <button class="close" type="button" aria-label="Close">×</button>
 
-      <h2 class="display-6 text-heading mb-5" data-i18="contact.formTitle"></h2>
+      <h2 class="display-6 mb-5" data-i18="contact.formTitle"></h2>
 
       <form class="form">
         <input type="text" data-i18-placeholder="contact.name" />
         <input type="email" data-i18-placeholder="contact.email" />
-        <input type="text" data-i18-placeholder="contact.company" />
-        <input type="text" data-i18-placeholder="contact.projectType" />
+        <input type="text" data-i18-placeholder="contact.phone" />
         <textarea rows="3" data-i18-placeholder="contact.message"></textarea>
 
         <button class="btn submit px-4 py-3 mt-4" type="submit" data-i18="contact.send"></button>

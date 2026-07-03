@@ -14,18 +14,6 @@
 
   background: var(--bg);
 
-  .display-2 {
-    max-width: 620px;
-    color: var(--text-h);
-    line-height: 0.95;
-    letter-spacing: -2px;
-
-    @media (max-width: 576px) {
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-  }
-
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

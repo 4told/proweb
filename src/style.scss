@@ -163,6 +163,10 @@ header {
         &.active {
           opacity: 1;
           top: 0;
+
+          @media all and (max-width: media.$mobile) {
+            text-align: center;
+          }
         }
       }
     }
