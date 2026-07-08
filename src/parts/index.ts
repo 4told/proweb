@@ -5,6 +5,7 @@ import { renderHowItHappens } from '../modules/how-it-happens/how-it-happens.ts'
 import { renderContact } from '../modules/contacts/contact.ts';
 import { renderFooter } from './footer.ts';
 import { renderSelectedWork } from '../modules/selected-works/selected-work.ts';
+import { renderAbout } from '../modules/about/about.ts';
 export function renderLayout() {
   return `
     ${renderHeader()}
@@ -13,6 +14,7 @@ export function renderLayout() {
     ${renderSelectedWork()}
     ${renderHowItHappens()}
     ${renderContact()}
+    ${renderAbout()}
     ${renderFooter()}
   `;
 }

@@ -84,20 +84,44 @@ export const translations = {
 
     contact: {
       title: 'Давай працювати разом',
-      subtitle: 'Розкажи про свій проєкт — ми швидко повернемось із рішенням.',
-      button: 'Звʼязатися',
+      subtitle:
+        'Розкажіть трохи про проєкт — ми відповімо з наступними кроками.',
+      button: 'Почати проєкт',
       privacy: 'Конфіденційність',
       formTitle: 'Заявка на проєкт',
       name: 'Ваше імʼя',
       email: 'Email',
       phone: 'Телефон',
-      message: 'Деталі проєкту',
-      send: 'Надіслати',
+      company: 'Компанія / бренд',
+      projectType: 'Що вам потрібно?',
+      budget: 'Бюджет',
+      timeline: 'Терміни',
+      website: 'Поточний сайт, якщо є',
+      message: 'Кілька слів про проєкт',
+      send: 'Надіслати заявку',
+      projectTypes: {
+        newWebsite: 'Новий сайт',
+        redesign: 'Редизайн сайту',
+        landing: 'Лендінг',
+        support: 'Підтримка сайту',
+      },
+      budgetRanges: {
+        notSure: 'Ще не визначились',
+        under500: 'До $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'Якнайшвидше',
+        month: 'Протягом місяця',
+        flexible: 'Гнучкі терміни',
+      },
     },
 
     about: {
-      title: 'Про нас',
-      text: 'Ми невелика команда, яка створює сучасні сайти, інтерфейси та цифрові рішення для бізнесу. Працюємо швидко, прозоро і з фокусом на результат.',
+      title: 'Про ProWeb',
+      text: 'ProWeb — невелика вебстудія, що спеціалізується на створенні готових до запуску сайтів для сервісних бізнесів і брендів, які зростають. Ми поєднуємо структуру, дизайн і розробку, щоб створювати сайти, які не лише виглядають сильніше, а й допомагають бізнесу чітко презентувати себе та перетворювати увагу на заявки. Ми працюємо напряму, підтримуємо прозорий процес і супроводжуємо проєкт від першого брифу до запуску.',
     },
 
     testimonials: {
@@ -191,20 +215,44 @@ export const translations = {
 
     contact: {
       title: 'Давай работать вместе',
-      subtitle: 'Расскажи о своём проекте — мы быстро вернёмся с решением.',
-      button: 'Связаться',
+      subtitle:
+        'Расскажите немного о проекте — мы вернёмся с понятными следующими шагами.',
+      button: 'Начать проект',
       privacy: 'Конфиденциальность',
       formTitle: 'Заявка на проект',
       name: 'Ваше имя',
       email: 'Email',
       phone: 'Телефон',
-      message: 'Детали проекта',
-      send: 'Отправить',
+      company: 'Компания / бренд',
+      projectType: 'Что вам нужно?',
+      budget: 'Бюджет',
+      timeline: 'Сроки',
+      website: 'Текущий сайт, если есть',
+      message: 'Несколько слов о проекте',
+      send: 'Отправить заявку',
+      projectTypes: {
+        newWebsite: 'Новый сайт',
+        redesign: 'Редизайн сайта',
+        landing: 'Лендинг',
+        support: 'Поддержка сайта',
+      },
+      budgetRanges: {
+        notSure: 'Пока не определились',
+        under500: 'До $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'Как можно скорее',
+        month: 'В течение месяца',
+        flexible: 'Гибкие сроки',
+      },
     },
 
     about: {
-      title: 'О нас',
-      text: 'Мы небольшая команда, которая создаёт современные сайты, интерфейсы и цифровые решения для бизнеса. Работаем быстро, прозрачно и с фокусом на результат.',
+      title: 'О ProWeb',
+      text: 'ProWeb — небольшая веб-студия, специализирующаяся на создании готовых к запуску сайтов для сервисных компаний и развивающихся брендов. Мы объединяем структуру, дизайн и разработку, чтобы создавать сайты, которые не только выглядят сильнее, но и помогают бизнесу ясно представить себя и превращать внимание посетителей в заявки. Мы работаем напрямую, поддерживаем прозрачный процесс и сопровождаем проект от первого брифа до запуска.',
     },
 
     testimonials: {
@@ -216,7 +264,7 @@ export const translations = {
     hero: {
       title1: 'We Make Brands Impossible To Ignore',
       title2: 'We build web sites that move.',
-      title3: 'Let\'s Build Something Legendary',
+      title3: "Let's Build Something Legendary",
     },
     contacts: 'Contacts',
 
@@ -297,22 +345,45 @@ export const translations = {
     },
 
     contact: {
-      title: "Let's work together",
+      title: "Let's build your next website",
       subtitle:
-        "Tell us about your project and we'll get back with a solution.",
-      button: 'Contact',
+        'Tell us a bit about your project — we’ll get back with clear next steps.',
+      button: 'Start a project',
       privacy: 'Privacy & Terms',
-      formTitle: 'Request an Invite',
+      formTitle: 'Project enquiry',
       name: 'Your name',
       email: 'Work email',
       phone: 'Phone',
-      message: 'Project details',
-      send: 'Send request',
+      company: 'Company / brand',
+      projectType: 'What do you need?',
+      budget: 'Budget range',
+      timeline: 'Timeline',
+      website: 'Current website, if any',
+      message: 'A few words about the project',
+      send: 'Send enquiry',
+      projectTypes: {
+        newWebsite: 'New website',
+        redesign: 'Website redesign',
+        landing: 'Landing page',
+        support: 'Ongoing support',
+      },
+      budgetRanges: {
+        notSure: 'Not sure yet',
+        under500: 'Under $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'As soon as possible',
+        month: 'Within a month',
+        flexible: 'Flexible',
+      },
     },
 
     about: {
-      title: 'About us',
-      text: 'We are a small team creating modern websites, interfaces, and digital solutions for businesses. We work fast, transparently, and with a clear focus on results.',
+      title: 'About ProWeb',
+      text: 'ProWeb is a small web studio focused on launch-ready websites for service businesses and growing brands. We combine structure, design, and development to build websites that not only look strong, but help businesses present themselves clearly and convert attention into enquiries. We work directly, keep the process transparent, and stay involved from first brief to launch.',
     },
 
     testimonials: {
