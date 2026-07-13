@@ -1,6 +1,6 @@
 export function renderContact(): string {
   return `
-<section class="contact py-5 min-vh-100">
+<section id="contact" class="contact py-5 min-vh-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
@@ -64,6 +64,10 @@ export function initContact(): void {
   const openBtn = contact?.querySelector<HTMLButtonElement>('.contact-open');
   const closeBtn = contact?.querySelector<HTMLButtonElement>('.close');
 
+  const externalOpenButtons = document.querySelectorAll<HTMLButtonElement>(
+    '[data-open-contact]'
+  );
+
   if (!contact || !modal || !openBtn || !closeBtn) return;
 
   const openModal = (): void => {
@@ -83,6 +87,10 @@ export function initContact(): void {
 
   openBtn.addEventListener('click', openModal);
   closeBtn.addEventListener('click', closeModal);
+
+  externalOpenButtons.forEach((button) => {
+    button.addEventListener('click', openModal);
+  });
 
   modal.addEventListener('click', (event) => {
     if (event.target === modal) closeModal();

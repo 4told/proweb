@@ -7,6 +7,8 @@
 @use './modules/how-it-happens/how-it-happens';
 @use './modules/contacts/contact';
 @use './modules/selected-works/selected-work';
+@use './modules/who-we-work-with/who-we-work-with';
+@use './modules/about/about';
 
 header {
   position: sticky;

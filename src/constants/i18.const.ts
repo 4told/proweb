@@ -100,6 +100,40 @@ export const translations = {
       },
     },
 
+    whoWeWorkWith: {
+      eyebrow: 'Для кого ми працюємо',
+      title: 'Найкраще ми працюємо з',
+      description:
+        'Ми допомагаємо компаніям, яким потрібен сучасний сайт, чітке позиціонування та сильніша присутність онлайн.',
+      items: {
+        serviceBusinesses: {
+          title: 'Сервісні бізнеси',
+          description:
+            'Компанії, яким потрібен сучасний преміальний сайт для зрозумілої презентації послуг і залучення нових клієнтів.',
+        },
+        localBrands: {
+          title: 'Локальні бренди',
+          description:
+            'Бізнеси, які хочуть виглядати сильніше за конкурентів і викликати більше довіри онлайн.',
+        },
+        founders: {
+          title: 'Засновники нових бізнесів і продуктів',
+          description:
+            'Команди, які запускають новий бізнес, послугу або пропозицію та потребують готового до запуску сайту.',
+        },
+        outdatedWebsites: {
+          title: 'Компанії із застарілими сайтами',
+          description:
+            'Бізнеси, яким потрібен редизайн, зрозуміліша структура та сучасніша презентація компанії.',
+        },
+        growthReady: {
+          title: 'Бізнеси, готові до зростання',
+          description:
+            'Компанії, яким потрібен сайт, підготовлений до реклами, SEO, аналітики та подальшого розвитку.',
+        },
+      },
+    },
+
     contact: {
       title: 'Давай працювати разом',
       subtitle:
@@ -249,6 +283,40 @@ export const translations = {
       },
     },
 
+    whoWeWorkWith: {
+      eyebrow: 'Для кого мы работаем',
+      title: 'Лучше всего мы работаем с',
+      description:
+        'Мы помогаем компаниям, которым нужен современный сайт, ясное позиционирование и более сильное присутствие в интернете.',
+      items: {
+        serviceBusinesses: {
+          title: 'Сервисные компании',
+          description:
+            'Компании, которым нужен современный премиальный сайт для понятной презентации услуг и привлечения новых клиентов.',
+        },
+        localBrands: {
+          title: 'Локальные бренды',
+          description:
+            'Бизнесы, которые хотят выглядеть сильнее конкурентов и вызывать больше доверия онлайн.',
+        },
+        founders: {
+          title: 'Основатели новых бизнесов и продуктов',
+          description:
+            'Команды, запускающие новый бизнес, услугу или предложение и нуждающиеся в готовом к запуску сайте.',
+        },
+        outdatedWebsites: {
+          title: 'Компании с устаревшими сайтами',
+          description:
+            'Бизнесы, которым нужен редизайн, более понятная структура и современная презентация компании.',
+        },
+        growthReady: {
+          title: 'Бизнесы, готовые к росту',
+          description:
+            'Компании, которым нужен сайт, подготовленный к рекламе, SEO, аналитике и дальнейшему развитию.',
+        },
+      },
+    },
+
     contact: {
       title: 'Давай работать вместе',
       subtitle:
@@ -391,6 +459,37 @@ export const translations = {
           title: 'Evolve',
           description: 'We continue improving after launch if needed.',
           outcome: 'A partner for updates, growth, and future changes.',
+        },
+      },
+    },
+
+    whoWeWorkWith: {
+      eyebrow: 'Who we work with',
+      title: 'We work best with',
+      description:
+        'We help businesses that need a stronger online presence, clearer positioning, and a website ready for real growth.',
+      items: {
+        serviceBusinesses: {
+          title: 'Service businesses',
+          description: 'Service businesses that need a modern premium website.',
+        },
+        localBrands: {
+          title: 'Local brands',
+          description:
+            'Local brands that want to look stronger than competitors.',
+        },
+        founders: {
+          title: 'Founders launching something new',
+          description: 'Founders launching a new business, service, or offer.',
+        },
+        outdatedWebsites: {
+          title: 'Companies with outdated websites',
+          description: 'Companies with outdated websites that need a redesign.',
+        },
+        growthReady: {
+          title: 'Businesses ready for growth',
+          description:
+            'Businesses that want a site ready for ads, SEO, and growth.',
         },
       },
     },
