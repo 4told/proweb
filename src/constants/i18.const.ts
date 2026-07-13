@@ -51,33 +51,51 @@ export const translations = {
 
     howItHappens: {
       title: 'Як це відбувається',
+      outcomeLabel: 'Ви отримуєте:',
       steps: {
-        strategy: {
+        research: {
           title: 'Дослідження',
-          description: 'Вивчаємо ваш бізнес, ринок і цілі проєкту.',
+          description: 'Ми вивчаємо ваш бізнес, аудиторію, конкурентів і цілі.',
+          outcome:
+            'Чіткий напрямок проєкту та пріоритети ще до початку дизайну.',
         },
-        identity: {
-          title: 'Концепція',
-          description: 'Плануємо взаємодію, структуру та творчий напрямок.',
-        },
-        experience: {
-          title: 'Дизайн',
+
+        structure: {
+          title: 'Структура',
           description:
-            'Створюємо сучасний інтерфейс із фокусом на зручність використання та естетику.',
+            'Ми формуємо архітектуру сайту та логіку подачі інформації.',
+          outcome:
+            'Зрозумілу структуру, яка чітко презентує бізнес і допомагає отримувати заявки.',
         },
-        campaign: {
+
+        design: {
+          title: 'Дизайн',
+          description: 'Ми створюємо візуальну систему та макети сторінок.',
+          outcome:
+            'Сайт, який виглядає сильніше, преміальніше та зручний у використанні.',
+        },
+
+        build: {
           title: 'Розробка',
           description:
-            'Розробляємо швидкий, масштабований та адаптивний цифровий продукт.',
+            'Ми розробляємо сайт і готуємо його до реального використання.',
+          outcome:
+            'Швидкий, адаптивний і готовий до запуску продукт, а не просто дизайн.',
         },
-        motion: {
+
+        launch: {
           title: 'Запуск',
-          description: 'Тестуємо, вдосконалюємо та успішно запускаємо проєкт.',
+          description:
+            'Ми тестуємо, підключаємо сервіси, публікуємо та передаємо сайт.',
+          outcome:
+            'Спокійний запуск без зайвих сюрпризів і повністю готовий сайт.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Розвиток',
           description:
-            'Постійно вдосконалюємо продукт на основі реальних даних користувачів і зростання бізнесу.',
+            'Ми продовжуємо вдосконалювати сайт після запуску за потреби.',
+          outcome: 'Партнера для подальших оновлень, розвитку та нових змін.',
         },
       },
     },
@@ -181,34 +199,52 @@ export const translations = {
 
     howItHappens: {
       title: 'Как это происходит',
+      outcomeLabel: 'Вы получаете:',
       steps: {
-        strategy: {
+        research: {
           title: 'Исследование',
-          description: 'Изучаем ваш бизнес, рынок и цели проекта.',
+          description: 'Мы изучаем ваш бизнес, аудиторию, конкурентов и цели.',
+          outcome:
+            'Чёткое направление проекта и приоритеты ещё до начала дизайна.',
         },
-        identity: {
-          title: 'Концепция',
+
+        structure: {
+          title: 'Структура',
           description:
-            'Планируем взаимодействие, структуру и творческое направление.',
+            'Мы формируем архитектуру сайта и логику подачи информации.',
+          outcome:
+            'Понятную структуру, которая ясно презентует бизнес и помогает получать заявки.',
         },
-        experience: {
+
+        design: {
           title: 'Дизайн',
-          description:
-            'Создаём современный интерфейс с акцентом на удобство использования и эстетику.',
+          description: 'Мы создаём визуальную систему и макеты страниц.',
+          outcome:
+            'Сайт, который выглядит сильнее, более премиально и удобен в использовании.',
         },
-        campaign: {
+
+        build: {
           title: 'Разработка',
           description:
-            'Разрабатываем быстрый, масштабируемый и адаптивный цифровой продукт.',
+            'Мы разрабатываем сайт и готовим его к реальному использованию.',
+          outcome:
+            'Быстрый, адаптивный и готовый к запуску продукт, а не просто дизайн.',
         },
-        motion: {
+
+        launch: {
           title: 'Запуск',
-          description: 'Тестируем, дорабатываем и успешно запускаем проект.',
+          description:
+            'Мы тестируем, подключаем сервисы, публикуем и передаём сайт.',
+          outcome:
+            'Спокойный запуск без лишних сюрпризов и полностью готовый сайт.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Развитие',
           description:
-            'Постоянно совершенствуем продукт на основе реальных данных пользователей и роста бизнеса.',
+            'Мы продолжаем развивать сайт после запуска при необходимости.',
+          outcome:
+            'Партнёра для дальнейших обновлений, роста и будущих изменений.',
         },
       },
     },
@@ -312,34 +348,49 @@ export const translations = {
 
     howItHappens: {
       title: 'How it happens',
+      outcomeLabel: 'You get:',
       steps: {
-        strategy: {
+        research: {
           title: 'Research',
-          description: 'Understanding your business, market, and objectives.',
-        },
-        identity: {
-          title: 'Concept',
           description:
-            'Planning the experience, structure, and creative direction.',
+            'We understand the business, audience, competitors, and goals.',
+          outcome:
+            'A clear project direction and priorities before design starts.',
         },
-        experience: {
+
+        structure: {
+          title: 'Structure',
+          description:
+            'We shape the website architecture and message hierarchy.',
+          outcome:
+            'A site structure that explains the business clearly and supports conversion.',
+        },
+
+        design: {
           title: 'Design',
-          description:
-            'Crafting a distinctive interface focused on usability and aesthetics.',
+          description: 'We create the visual system and page layouts.',
+          outcome:
+            'A website that looks stronger, feels more premium, and is easy to navigate.',
         },
-        campaign: {
+
+        build: {
           title: 'Build',
-          description:
-            'Developing a fast, scalable, and responsive digital product.',
+          description: 'We develop the site and prepare it for real use.',
+          outcome:
+            'A fast, responsive, launch-ready product — not just static design.',
         },
-        motion: {
+
+        launch: {
           title: 'Launch',
-          description: 'Testing, refining, and deploying everything smoothly.',
+          description: 'We test, connect, publish, and hand over.',
+          outcome:
+            'A smooth launch with fewer surprises and a site you can actually use.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Evolve',
-          description:
-            'Continuous improvements based on real user data and business growth.',
+          description: 'We continue improving after launch if needed.',
+          outcome: 'A partner for updates, growth, and future changes.',
         },
       },
     },
