@@ -14,10 +14,7 @@ export function renderHowItHappens(): string {
 <section class="how-it-happens py-5">
   <div class="container">
     <div class="row">
-      <h2
-        class="display-1 py-4 fade-up"
-        data-i18="howItHappens.title"
-      ></h2>
+      <h2 class="display-1 py-4 fade-up" data-i18="howItHappens.title"></h2>
 
       <div class="grid">
         ${howItHappensConst
@@ -28,26 +25,13 @@ export function renderHowItHappens(): string {
                   ${String(index + 1).padStart(2, '0')}
                 </span>
 
-                <h3
-                  class="mb-3"
-                  data-i18="${step.titleKey}"
-                ></h3>
+                <h3 class="mb-3" data-i18="${step.titleKey}"></h3>
 
-                <p
-                  class="description mb-4"
-                  data-i18="${step.descriptionKey}"
-                ></p>
+                <p class="description mb-4" data-i18="${step.descriptionKey}"></p>
 
                 <p class="outcome m-0">
-                  <span
-                    class="outcome-label"
-                    data-i18="howItHappens.outcomeLabel"
-                  ></span>
-
-                  <span
-                    class="outcome-text"
-                    data-i18="${step.outcomeKey}"
-                  ></span>
+                  <span class="outcome-label" data-i18="howItHappens.outcomeLabel"></span>
+                  <span class="outcome-text" data-i18="${step.outcomeKey}"></span>
                 </p>
               </article>
             `

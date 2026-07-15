@@ -1,6 +1,4 @@
 .contact {
-  --modal-overlay: rgb(0 0 0 / 56%); //todo move variable to root
-
   background: var(--bg);
 
   p.lead {
@@ -57,26 +55,19 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 3.5rem;
     height: 3.5rem;
     padding: 0;
-
     border: 0;
     border-radius: 12px;
-
     color: var(--text-h);
     background: transparent;
-
     font-size: 2rem;
     line-height: 1;
-
     cursor: pointer;
-
     transition:
       color 0.25s ease,
       transform 0.25s ease;
@@ -115,18 +106,13 @@
   select {
     width: 100%;
     padding: 0 0 0.75rem;
-
     border: 0;
     border-bottom: 1px solid var(--border);
-
     outline: none;
     resize: none;
-
     color: var(--text-h);
     background-color: transparent;
-
     font: 700 1rem/1.4 var(--sans);
-
     transition:
       border-color 0.25s ease,
       color 0.25s ease;
@@ -145,11 +131,8 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
-    cursor: pointer;
-
+    padding-right: 2rem;
     color: var(--text);
-
     background-image:
       linear-gradient(45deg, transparent 50%, currentColor 50%),
       linear-gradient(135deg, currentColor 50%, transparent 50%);
@@ -160,8 +143,7 @@
       6px 6px,
       6px 6px;
     background-repeat: no-repeat;
-
-    padding-right: 2rem;
+    cursor: pointer;
 
     &:valid {
       color: var(--text-h);
