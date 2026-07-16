@@ -25,13 +25,7 @@ export function renderContact(): string {
 
   <div class="modal" aria-hidden="true">
     <div class="panel w-100 h-100 p-4 p-md-5">
-      <button
-        class="close"
-        type="button"
-        aria-label="Close"
-      >
-        ×
-      </button>
+      <button class="close" type="button" aria-label="Close">×</button>
 
       <h2
         class="display-6 mb-4"
@@ -40,26 +34,30 @@ export function renderContact(): string {
 
       <form class="form">
         <input
+          name="name"
           type="text"
           data-i18-placeholder="contact.name"
         />
 
         <input
+          name="email"
           type="email"
           data-i18-placeholder="contact.email"
         />
 
         <input
+          name="phone"
           type="tel"
           data-i18-placeholder="contact.phone"
         />
 
         <input
+          name="company"
           type="text"
           data-i18-placeholder="contact.company"
         />
 
-        <select required>
+        <select class="project-type" name="projectType" required>
           <option
             value=""
             selected
@@ -88,7 +86,7 @@ export function renderContact(): string {
           ></option>
         </select>
 
-        <select required>
+        <select name="budget" required>
           <option
             value=""
             selected
@@ -122,7 +120,7 @@ export function renderContact(): string {
           ></option>
         </select>
 
-        <select required>
+        <select name="timeline" required>
           <option
             value=""
             selected
@@ -147,14 +145,23 @@ export function renderContact(): string {
         </select>
 
         <input
+          name="website"
           type="url"
           data-i18-placeholder="contact.website"
         />
 
         <textarea
+          name="message"
           rows="3"
           data-i18-placeholder="contact.message"
         ></textarea>
+
+        <input
+          class="lead-context"
+          name="leadContext"
+          type="hidden"
+          value=""
+        />
 
         <button
           class="btn submit px-4 py-3 mt-4"
@@ -173,17 +180,52 @@ export function initContact(): void {
   const modal = contact?.querySelector<HTMLElement>('.modal');
   const openBtn = contact?.querySelector<HTMLButtonElement>('.contact-open');
   const closeBtn = contact?.querySelector<HTMLButtonElement>('.close');
+  const projectTypeSelect =
+    contact?.querySelector<HTMLSelectElement>('.project-type');
+  const leadContextInput =
+    contact?.querySelector<HTMLInputElement>('.lead-context');
 
   const externalOpenButtons = document.querySelectorAll<HTMLButtonElement>(
     '[data-open-contact]'
   );
 
-  if (!contact || !modal || !openBtn || !closeBtn) return;
+  if (
+    !contact ||
+    !modal ||
+    !openBtn ||
+    !closeBtn ||
+    !projectTypeSelect ||
+    !leadContextInput
+  ) {
+    return;
+  }
 
   const openModal = (): void => {
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+  };
+
+  const openContextualModal = (button: HTMLButtonElement): void => {
+    const projectType = button.dataset.projectType;
+    const leadContext = button.dataset.leadContext;
+
+    projectTypeSelect.value = '';
+    leadContextInput.value = '';
+
+    if (projectType) {
+      const optionExists = Array.from(projectTypeSelect.options).some(
+        (option) => option.value === projectType
+      );
+
+      if (optionExists) {
+        projectTypeSelect.value = projectType;
+      }
+    }
+
+    leadContextInput.value = leadContext ?? '';
+
+    openModal();
   };
 
   const closeModal = (): void => {
@@ -195,10 +237,16 @@ export function initContact(): void {
     }, 600);
   };
 
-  openBtn.addEventListener('click', openModal);
+  openBtn.addEventListener('click', () => {
+    projectTypeSelect.value = '';
+    leadContextInput.value = '';
+    openModal();
+  });
 
   externalOpenButtons.forEach((button) => {
-    button.addEventListener('click', openModal);
+    button.addEventListener('click', () => {
+      openContextualModal(button);
+    });
   });
 
   closeBtn.addEventListener('click', closeModal);

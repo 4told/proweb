@@ -30,6 +30,12 @@ export function renderWhoWeWorkWith(): string {
                 class="audience-item fade-up"
                 type="button"
                 data-open-contact
+                data-lead-context="${item.leadContext}"
+                ${
+                  item.projectType
+                    ? `data-project-type="${item.projectType}"`
+                    : ''
+                }
               >
                 <span class="audience-number">
                   ${String(index + 1).padStart(2, '0')}
