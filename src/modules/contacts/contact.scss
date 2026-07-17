@@ -1,5 +1,4 @@
 .contact {
-  --modal-overlay: rgb(0 0 0 / 56%); //todo move variable to root
   background: var(--bg);
 
   p.lead {
@@ -65,22 +64,24 @@
     border: 0;
     border-radius: 12px;
     color: var(--text-h);
+    background: transparent;
     font-size: 2rem;
     line-height: 1;
     cursor: pointer;
     transition:
-      background-color 0.25s ease,
+      color 0.25s ease,
       transform 0.25s ease;
 
     &:hover {
-     cursor: pointer;
+      color: var(--accent);
+      transform: scale(1.04);
     }
   }
 
   .form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .submit {
@@ -101,25 +102,55 @@
   }
 
   input,
-  textarea {
+  textarea,
+  select {
     width: 100%;
-    padding: 0 0 1rem;
+    padding: 0 0 0.75rem;
     border: 0;
     border-bottom: 1px solid var(--border);
     outline: none;
     resize: none;
     color: var(--text-h);
-    background: transparent;
+    background-color: transparent;
     font: 700 1rem/1.4 var(--sans);
-    transition: border-color 0.25s ease;
+    transition:
+      border-color 0.25s ease,
+      color 0.25s ease;
 
     &::placeholder {
       color: var(--text);
-      opacity: 0.8;
+      opacity: 0.75;
     }
 
     &:focus {
       border-color: var(--accent);
+    }
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2rem;
+    color: var(--text);
+    background-image:
+      linear-gradient(45deg, transparent 50%, currentColor 50%),
+      linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position:
+      calc(100% - 14px) 45%,
+      calc(100% - 8px) 45%;
+    background-size:
+      6px 6px,
+      6px 6px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:valid {
+      color: var(--text-h);
+    }
+
+    option {
+      color: #111;
     }
   }
 }

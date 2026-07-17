@@ -15,6 +15,7 @@ export function renderHowItHappens(): string {
   <div class="container">
     <div class="row">
       <h2 class="display-1 py-4 fade-up" data-i18="howItHappens.title"></h2>
+
       <div class="grid">
         ${howItHappensConst
           .map(
@@ -23,8 +24,15 @@ export function renderHowItHappens(): string {
                 <span class="number d-block mb-4">
                   ${String(index + 1).padStart(2, '0')}
                 </span>
+
                 <h3 class="mb-3" data-i18="${step.titleKey}"></h3>
-                <p class="description m-0" data-i18="${step.descriptionKey}"></p>
+
+                <p class="description mb-4" data-i18="${step.descriptionKey}"></p>
+
+                <p class="outcome m-0">
+                  <span class="outcome-label" data-i18="howItHappens.outcomeLabel"></span>
+                  <span class="outcome-text" data-i18="${step.outcomeKey}"></span>
+                </p>
               </article>
             `
           )
@@ -57,23 +65,33 @@ export function initHowItHappensScroll(): void {
 
   const easeOutQuad = (value: number): number => 1 - Math.pow(1 - value, 2);
 
+  let animationFrameId: number | null = null;
+
   const update = (): void => {
     const viewportHeight = window.innerHeight;
+    const viewportCenter = viewportHeight / 2;
+
+    const focusRadius = viewportHeight * 0.18;
+    const animationDistance = viewportHeight * 0.75;
 
     steps.forEach((step, index) => {
       const rect = step.getBoundingClientRect();
-      const offset = offsets[index] || { x: 0, y: 0, rotate: 0 };
+      const stepCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = Math.abs(stepCenter - viewportCenter);
 
-      const start = viewportHeight * 0.95;
-      const end = viewportHeight * 0.35;
+      const progress =
+        1 -
+        clamp(
+          (distanceFromCenter - focusRadius) /
+            (animationDistance - focusRadius),
+          0,
+          1
+        );
 
-      const progress = clamp((start - rect.top) / (start - end), 0, 1);
+      const offset = offsets[index] ?? { x: 0, y: 0, rotate: 0 };
 
-      const delayedProgress = clamp(progress - index * 0.02, 0, 1);
-      const easedProgress = easeOutCubic(delayedProgress);
-
-      const opacityProgress = clamp(progress - index * 0.01, 0, 1);
-      const easedOpacity = easeOutQuad(opacityProgress);
+      const easedProgress = easeOutCubic(progress);
+      const easedOpacity = easeOutQuad(progress);
 
       const x = offset.x * (1 - easedProgress);
       const y = offset.y * (1 - easedProgress);
@@ -84,10 +102,18 @@ export function initHowItHappensScroll(): void {
       step.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale}) rotate(${rotate}deg)`;
       step.style.opacity = String(opacity);
     });
+
+    animationFrameId = null;
   };
 
-  window.addEventListener('scroll', update);
-  window.addEventListener('resize', update);
+  const requestUpdate = (): void => {
+    if (animationFrameId !== null) return;
+
+    animationFrameId = window.requestAnimationFrame(update);
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
 
   update();
 }

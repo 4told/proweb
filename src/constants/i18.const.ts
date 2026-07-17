@@ -51,53 +51,129 @@ export const translations = {
 
     howItHappens: {
       title: 'Як це відбувається',
+      outcomeLabel: 'Ви отримуєте:',
       steps: {
-        strategy: {
+        research: {
           title: 'Дослідження',
-          description: 'Вивчаємо ваш бізнес, ринок і цілі проєкту.',
+          description: 'Ми вивчаємо ваш бізнес, аудиторію, конкурентів і цілі.',
+          outcome:
+            'Чіткий напрямок проєкту та пріоритети ще до початку дизайну.',
         },
-        identity: {
-          title: 'Концепція',
-          description: 'Плануємо взаємодію, структуру та творчий напрямок.',
-        },
-        experience: {
-          title: 'Дизайн',
+
+        structure: {
+          title: 'Структура',
           description:
-            'Створюємо сучасний інтерфейс із фокусом на зручність використання та естетику.',
+            'Ми формуємо архітектуру сайту та логіку подачі інформації.',
+          outcome:
+            'Зрозумілу структуру, яка чітко презентує бізнес і допомагає отримувати заявки.',
         },
-        campaign: {
+
+        design: {
+          title: 'Дизайн',
+          description: 'Ми створюємо візуальну систему та макети сторінок.',
+          outcome:
+            'Сайт, який виглядає сильніше, преміальніше та зручний у використанні.',
+        },
+
+        build: {
           title: 'Розробка',
           description:
-            'Розробляємо швидкий, масштабований та адаптивний цифровий продукт.',
+            'Ми розробляємо сайт і готуємо його до реального використання.',
+          outcome:
+            'Швидкий, адаптивний і готовий до запуску продукт, а не просто дизайн.',
         },
-        motion: {
+
+        launch: {
           title: 'Запуск',
-          description: 'Тестуємо, вдосконалюємо та успішно запускаємо проєкт.',
+          description:
+            'Ми тестуємо, підключаємо сервіси, публікуємо та передаємо сайт.',
+          outcome:
+            'Спокійний запуск без зайвих сюрпризів і повністю готовий сайт.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Розвиток',
           description:
-            'Постійно вдосконалюємо продукт на основі реальних даних користувачів і зростання бізнесу.',
+            'Ми продовжуємо вдосконалювати сайт після запуску за потреби.',
+          outcome: 'Партнера для подальших оновлень, розвитку та нових змін.',
+        },
+      },
+    },
+
+    whoWeWorkWith: {
+      eyebrow: 'Для кого ми працюємо',
+      title: 'Найкраще ми працюємо з',
+      description:
+        'Ми допомагаємо компаніям, яким потрібен сучасний сайт, чітке позиціонування та сильніша присутність онлайн.',
+      items: {
+        serviceBusinesses: {
+          title: 'Сервісні бізнеси',
+          description:
+            'Компанії, яким потрібен сучасний преміальний сайт для зрозумілої презентації послуг і залучення нових клієнтів.',
+        },
+        localBrands: {
+          title: 'Локальні бренди',
+          description:
+            'Бізнеси, які хочуть виглядати сильніше за конкурентів і викликати більше довіри онлайн.',
+        },
+        founders: {
+          title: 'Засновники нових бізнесів і продуктів',
+          description:
+            'Команди, які запускають новий бізнес, послугу або пропозицію та потребують готового до запуску сайту.',
+        },
+        outdatedWebsites: {
+          title: 'Компанії із застарілими сайтами',
+          description:
+            'Бізнеси, яким потрібен редизайн, зрозуміліша структура та сучасніша презентація компанії.',
+        },
+        growthReady: {
+          title: 'Бізнеси, готові до зростання',
+          description:
+            'Компанії, яким потрібен сайт, підготовлений до реклами, SEO, аналітики та подальшого розвитку.',
         },
       },
     },
 
     contact: {
       title: 'Давай працювати разом',
-      subtitle: 'Розкажи про свій проєкт — ми швидко повернемось із рішенням.',
-      button: 'Звʼязатися',
+      subtitle:
+        'Розкажіть трохи про проєкт — ми відповімо з наступними кроками.',
+      button: 'Почати проєкт',
       privacy: 'Конфіденційність',
       formTitle: 'Заявка на проєкт',
       name: 'Ваше імʼя',
       email: 'Email',
       phone: 'Телефон',
-      message: 'Деталі проєкту',
-      send: 'Надіслати',
+      company: 'Компанія / бренд',
+      projectType: 'Що вам потрібно?',
+      budget: 'Бюджет',
+      timeline: 'Терміни',
+      website: 'Поточний сайт, якщо є',
+      message: 'Кілька слів про проєкт',
+      send: 'Надіслати заявку',
+      projectTypes: {
+        newWebsite: 'Новий сайт',
+        redesign: 'Редизайн сайту',
+        landing: 'Лендінг',
+        support: 'Підтримка сайту',
+      },
+      budgetRanges: {
+        notSure: 'Ще не визначились',
+        under500: 'До $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'Якнайшвидше',
+        month: 'Протягом місяця',
+        flexible: 'Гнучкі терміни',
+      },
     },
 
     about: {
-      title: 'Про нас',
-      text: 'Ми невелика команда, яка створює сучасні сайти, інтерфейси та цифрові рішення для бізнесу. Працюємо швидко, прозоро і з фокусом на результат.',
+      title: 'Про ProWeb',
+      text: 'ProWeb — невелика вебстудія, що спеціалізується на створенні готових до запуску сайтів для сервісних бізнесів і брендів, які зростають. Ми поєднуємо структуру, дизайн і розробку, щоб створювати сайти, які не лише виглядають сильніше, а й допомагають бізнесу чітко презентувати себе та перетворювати увагу на заявки. Ми працюємо напряму, підтримуємо прозорий процес і супроводжуємо проєкт від першого брифу до запуску.',
     },
 
     testimonials: {
@@ -157,54 +233,130 @@ export const translations = {
 
     howItHappens: {
       title: 'Как это происходит',
+      outcomeLabel: 'Вы получаете:',
       steps: {
-        strategy: {
+        research: {
           title: 'Исследование',
-          description: 'Изучаем ваш бизнес, рынок и цели проекта.',
+          description: 'Мы изучаем ваш бизнес, аудиторию, конкурентов и цели.',
+          outcome:
+            'Чёткое направление проекта и приоритеты ещё до начала дизайна.',
         },
-        identity: {
-          title: 'Концепция',
+
+        structure: {
+          title: 'Структура',
           description:
-            'Планируем взаимодействие, структуру и творческое направление.',
+            'Мы формируем архитектуру сайта и логику подачи информации.',
+          outcome:
+            'Понятную структуру, которая ясно презентует бизнес и помогает получать заявки.',
         },
-        experience: {
+
+        design: {
           title: 'Дизайн',
-          description:
-            'Создаём современный интерфейс с акцентом на удобство использования и эстетику.',
+          description: 'Мы создаём визуальную систему и макеты страниц.',
+          outcome:
+            'Сайт, который выглядит сильнее, более премиально и удобен в использовании.',
         },
-        campaign: {
+
+        build: {
           title: 'Разработка',
           description:
-            'Разрабатываем быстрый, масштабируемый и адаптивный цифровой продукт.',
+            'Мы разрабатываем сайт и готовим его к реальному использованию.',
+          outcome:
+            'Быстрый, адаптивный и готовый к запуску продукт, а не просто дизайн.',
         },
-        motion: {
+
+        launch: {
           title: 'Запуск',
-          description: 'Тестируем, дорабатываем и успешно запускаем проект.',
+          description:
+            'Мы тестируем, подключаем сервисы, публикуем и передаём сайт.',
+          outcome:
+            'Спокойный запуск без лишних сюрпризов и полностью готовый сайт.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Развитие',
           description:
-            'Постоянно совершенствуем продукт на основе реальных данных пользователей и роста бизнеса.',
+            'Мы продолжаем развивать сайт после запуска при необходимости.',
+          outcome:
+            'Партнёра для дальнейших обновлений, роста и будущих изменений.',
+        },
+      },
+    },
+
+    whoWeWorkWith: {
+      eyebrow: 'Для кого мы работаем',
+      title: 'Лучше всего мы работаем с',
+      description:
+        'Мы помогаем компаниям, которым нужен современный сайт, ясное позиционирование и более сильное присутствие в интернете.',
+      items: {
+        serviceBusinesses: {
+          title: 'Сервисные компании',
+          description:
+            'Компании, которым нужен современный премиальный сайт для понятной презентации услуг и привлечения новых клиентов.',
+        },
+        localBrands: {
+          title: 'Локальные бренды',
+          description:
+            'Бизнесы, которые хотят выглядеть сильнее конкурентов и вызывать больше доверия онлайн.',
+        },
+        founders: {
+          title: 'Основатели новых бизнесов и продуктов',
+          description:
+            'Команды, запускающие новый бизнес, услугу или предложение и нуждающиеся в готовом к запуску сайте.',
+        },
+        outdatedWebsites: {
+          title: 'Компании с устаревшими сайтами',
+          description:
+            'Бизнесы, которым нужен редизайн, более понятная структура и современная презентация компании.',
+        },
+        growthReady: {
+          title: 'Бизнесы, готовые к росту',
+          description:
+            'Компании, которым нужен сайт, подготовленный к рекламе, SEO, аналитике и дальнейшему развитию.',
         },
       },
     },
 
     contact: {
       title: 'Давай работать вместе',
-      subtitle: 'Расскажи о своём проекте — мы быстро вернёмся с решением.',
-      button: 'Связаться',
+      subtitle:
+        'Расскажите немного о проекте — мы вернёмся с понятными следующими шагами.',
+      button: 'Начать проект',
       privacy: 'Конфиденциальность',
       formTitle: 'Заявка на проект',
       name: 'Ваше имя',
       email: 'Email',
       phone: 'Телефон',
-      message: 'Детали проекта',
-      send: 'Отправить',
+      company: 'Компания / бренд',
+      projectType: 'Что вам нужно?',
+      budget: 'Бюджет',
+      timeline: 'Сроки',
+      website: 'Текущий сайт, если есть',
+      message: 'Несколько слов о проекте',
+      send: 'Отправить заявку',
+      projectTypes: {
+        newWebsite: 'Новый сайт',
+        redesign: 'Редизайн сайта',
+        landing: 'Лендинг',
+        support: 'Поддержка сайта',
+      },
+      budgetRanges: {
+        notSure: 'Пока не определились',
+        under500: 'До $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'Как можно скорее',
+        month: 'В течение месяца',
+        flexible: 'Гибкие сроки',
+      },
     },
 
     about: {
-      title: 'О нас',
-      text: 'Мы небольшая команда, которая создаёт современные сайты, интерфейсы и цифровые решения для бизнеса. Работаем быстро, прозрачно и с фокусом на результат.',
+      title: 'О ProWeb',
+      text: 'ProWeb — небольшая веб-студия, специализирующаяся на создании готовых к запуску сайтов для сервисных компаний и развивающихся брендов. Мы объединяем структуру, дизайн и разработку, чтобы создавать сайты, которые не только выглядят сильнее, но и помогают бизнесу ясно представить себя и превращать внимание посетителей в заявки. Мы работаем напрямую, поддерживаем прозрачный процесс и сопровождаем проект от первого брифа до запуска.',
     },
 
     testimonials: {
@@ -216,7 +368,7 @@ export const translations = {
     hero: {
       title1: 'We Make Brands Impossible To Ignore',
       title2: 'We build web sites that move.',
-      title3: 'Let\'s Build Something Legendary',
+      title3: "Let's Build Something Legendary",
     },
     contacts: 'Contacts',
 
@@ -264,55 +416,124 @@ export const translations = {
 
     howItHappens: {
       title: 'How it happens',
+      outcomeLabel: 'You get:',
       steps: {
-        strategy: {
+        research: {
           title: 'Research',
-          description: 'Understanding your business, market, and objectives.',
-        },
-        identity: {
-          title: 'Concept',
           description:
-            'Planning the experience, structure, and creative direction.',
+            'We understand the business, audience, competitors, and goals.',
+          outcome:
+            'A clear project direction and priorities before design starts.',
         },
-        experience: {
+
+        structure: {
+          title: 'Structure',
+          description:
+            'We shape the website architecture and message hierarchy.',
+          outcome:
+            'A site structure that explains the business clearly and supports conversion.',
+        },
+
+        design: {
           title: 'Design',
-          description:
-            'Crafting a distinctive interface focused on usability and aesthetics.',
+          description: 'We create the visual system and page layouts.',
+          outcome:
+            'A website that looks stronger, feels more premium, and is easy to navigate.',
         },
-        campaign: {
+
+        build: {
           title: 'Build',
-          description:
-            'Developing a fast, scalable, and responsive digital product.',
+          description: 'We develop the site and prepare it for real use.',
+          outcome:
+            'A fast, responsive, launch-ready product — not just static design.',
         },
-        motion: {
+
+        launch: {
           title: 'Launch',
-          description: 'Testing, refining, and deploying everything smoothly.',
+          description: 'We test, connect, publish, and hand over.',
+          outcome:
+            'A smooth launch with fewer surprises and a site you can actually use.',
         },
-        spatial: {
+
+        evolve: {
           title: 'Evolve',
+          description: 'We continue improving after launch if needed.',
+          outcome: 'A partner for updates, growth, and future changes.',
+        },
+      },
+    },
+
+    whoWeWorkWith: {
+      eyebrow: 'Who we work with',
+      title: 'We work best with',
+      description:
+        'We help businesses that need a stronger online presence, clearer positioning, and a website ready for real growth.',
+      items: {
+        serviceBusinesses: {
+          title: 'Service businesses',
+          description: 'Service businesses that need a modern premium website.',
+        },
+        localBrands: {
+          title: 'Local brands',
           description:
-            'Continuous improvements based on real user data and business growth.',
+            'Local brands that want to look stronger than competitors.',
+        },
+        founders: {
+          title: 'Founders launching something new',
+          description: 'Founders launching a new business, service, or offer.',
+        },
+        outdatedWebsites: {
+          title: 'Companies with outdated websites',
+          description: 'Companies with outdated websites that need a redesign.',
+        },
+        growthReady: {
+          title: 'Businesses ready for growth',
+          description:
+            'Businesses that want a site ready for ads, SEO, and growth.',
         },
       },
     },
 
     contact: {
-      title: "Let's work together",
+      title: "Let's build your next website",
       subtitle:
-        "Tell us about your project and we'll get back with a solution.",
-      button: 'Contact',
+        'Tell us a bit about your project — we’ll get back with clear next steps.',
+      button: 'Start a project',
       privacy: 'Privacy & Terms',
-      formTitle: 'Request an Invite',
+      formTitle: 'Project enquiry',
       name: 'Your name',
       email: 'Work email',
       phone: 'Phone',
-      message: 'Project details',
-      send: 'Send request',
+      company: 'Company / brand',
+      projectType: 'What do you need?',
+      budget: 'Budget range',
+      timeline: 'Timeline',
+      website: 'Current website, if any',
+      message: 'A few words about the project',
+      send: 'Send enquiry',
+      projectTypes: {
+        newWebsite: 'New website',
+        redesign: 'Website redesign',
+        landing: 'Landing page',
+        support: 'Ongoing support',
+      },
+      budgetRanges: {
+        notSure: 'Not sure yet',
+        under500: 'Under $500',
+        from500: '$500–$1,000',
+        from1000: '$1,000–$2,500',
+        from2500: '$2,500+',
+      },
+      timelines: {
+        asap: 'As soon as possible',
+        month: 'Within a month',
+        flexible: 'Flexible',
+      },
     },
 
     about: {
-      title: 'About us',
-      text: 'We are a small team creating modern websites, interfaces, and digital solutions for businesses. We work fast, transparently, and with a clear focus on results.',
+      title: 'About ProWeb',
+      text: 'ProWeb is a small web studio focused on launch-ready websites for service businesses and growing brands. We combine structure, design, and development to build websites that not only look strong, but help businesses present themselves clearly and convert attention into enquiries. We work directly, keep the process transparent, and stay involved from first brief to launch.',
     },
 
     testimonials: {
