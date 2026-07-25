@@ -3,20 +3,9 @@
 .who-we-work-with {
   background: var(--bg);
 
-  .eyebrow {
-    color: var(--accent);
-    font: 700 0.75rem/1.2 var(--heading);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
   .section-description {
     color: var(--text);
     font: 400 1.125rem/1.7 var(--sans);
-  }
-
-  .audience-list {
-    border-top: 1px solid var(--accent-border);
   }
 
   .audience-item {
@@ -83,12 +72,16 @@
       }
 
       .audience-arrow {
-        transform: translateX(6px);
+        transform: translate(4px, -4px);
       }
     }
 
     &:focus-visible {
       box-shadow: inset 0 0 0 2px var(--accent);
+    }
+
+    &:last-child {
+      border-bottom: 0;
     }
   }
 
@@ -109,9 +102,9 @@
   }
 
   .audience-title {
-    text-align: left;
     color: var(--text-h);
     font: 700 1.9rem/1.2 var(--heading);
+    text-align: left;
   }
 
   .audience-description {
@@ -120,9 +113,11 @@
   }
 
   .audience-arrow {
+    width: 20px;
+    height: 20px;
     color: var(--text-h);
-    font: 400 1.6rem/1 var(--sans);
     opacity: 0.45;
+    flex-shrink: 0;
     transition:
       color 0.3s ease,
       opacity 0.3s ease,
