@@ -26,9 +26,9 @@ export function renderTranslations() {
   });
 
   document
-    .querySelectorAll<
-      HTMLInputElement | HTMLTextAreaElement
-    >('[data-i18-placeholder]')
+    .querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+      '[data-i18-placeholder]'
+    )
     .forEach((element) => {
       const key = element.getAttribute('data-i18-placeholder');
 
@@ -58,6 +58,12 @@ export function setLang(lang: Lang) {
 
   renderTranslations();
   updateLanguageDropdown();
+
+  window.dispatchEvent(
+    new CustomEvent('app:languagechange', {
+      detail: lang,
+    })
+  );
 
   document.querySelector('.lang-switcher')?.classList.remove('open');
 }

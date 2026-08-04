@@ -6,11 +6,6 @@ export function renderWhoWeWorkWith(): string {
   <div class="container">
     <div class="row">
       <div class="section-heading col-12 col-lg-8 py-4">
-        <p
-          class="eyebrow mb-3 fade-up"
-          data-i18="whoWeWorkWith.eyebrow"
-        ></p>
-
         <h2
           class="display-1 mb-4 fade-up"
           data-i18="whoWeWorkWith.title"
@@ -53,9 +48,20 @@ export function renderWhoWeWorkWith(): string {
                   ></p>
                 </div>
 
-                <span class="audience-arrow" aria-hidden="true">
-                  →
-                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="audience-arrow bi bi-arrow-up-right"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0 0 1h3.657L3.146 13.646a.5.5 0 0 0 .708.708L13 5.207v3.657a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0-.5.5"
+                  />
+                </svg>
               </button>
             `
           )

@@ -141,33 +141,42 @@ export const translations = {
       button: 'Почати проєкт',
       privacy: 'Конфіденційність',
       formTitle: 'Заявка на проєкт',
+
       name: 'Ваше імʼя',
-      email: 'Email',
-      phone: 'Телефон',
-      company: 'Компанія / бренд',
+      contactMethod: 'Як з вами зв’язатися?',
+      contactValue: 'Ваш контакт',
       projectType: 'Що вам потрібно?',
-      budget: 'Бюджет',
-      timeline: 'Терміни',
-      website: 'Поточний сайт, якщо є',
       message: 'Кілька слів про проєкт',
       send: 'Надіслати заявку',
+
+      contactMethods: {
+        phone: 'Телефон',
+        telegram: 'Telegram',
+        email: 'Email',
+      },
+
+      contactPlaceholders: {
+        phone: '+380 XX XXX XX XX',
+        telegram: '@username або номер телефону',
+        email: 'name@example.com',
+      },
+
       projectTypes: {
         newWebsite: 'Новий сайт',
         redesign: 'Редизайн сайту',
         landing: 'Лендінг',
         support: 'Підтримка сайту',
+        notSure: 'Ще не визначився — потрібна консультація',
       },
-      budgetRanges: {
-        notSure: 'Ще не визначились',
-        under500: 'До $500',
-        from500: '$500–$1,000',
-        from1000: '$1,000–$2,500',
-        from2500: '$2,500+',
-      },
-      timelines: {
-        asap: 'Якнайшвидше',
-        month: 'Протягом місяця',
-        flexible: 'Гнучкі терміни',
+
+      validation: {
+        nameRequired: 'Вкажіть ваше імʼя',
+        contactRequired: 'Вкажіть контакт для зв’язку',
+        phoneInvalid: 'Вкажіть коректний номер телефону',
+        telegramInvalid: 'Вкажіть @username або коректний номер телефону',
+        emailInvalid: 'Перевірте правильність email',
+        projectTypeRequired: 'Оберіть тип проєкту',
+        messageRequired: 'Розкажіть кілька слів про проєкт',
       },
     },
 
@@ -324,33 +333,42 @@ export const translations = {
       button: 'Начать проект',
       privacy: 'Конфиденциальность',
       formTitle: 'Заявка на проект',
+
       name: 'Ваше имя',
-      email: 'Email',
-      phone: 'Телефон',
-      company: 'Компания / бренд',
+      contactMethod: 'Как с вами связаться?',
+      contactValue: 'Ваш контакт',
       projectType: 'Что вам нужно?',
-      budget: 'Бюджет',
-      timeline: 'Сроки',
-      website: 'Текущий сайт, если есть',
       message: 'Несколько слов о проекте',
       send: 'Отправить заявку',
+
+      contactMethods: {
+        phone: 'Телефон',
+        telegram: 'Telegram',
+        email: 'Email',
+      },
+
+      contactPlaceholders: {
+        phone: '+380 XX XXX XX XX',
+        telegram: '@username или номер телефона',
+        email: 'name@example.com',
+      },
+
       projectTypes: {
         newWebsite: 'Новый сайт',
         redesign: 'Редизайн сайта',
         landing: 'Лендинг',
         support: 'Поддержка сайта',
+        notSure: 'Пока не определился — нужна консультация',
       },
-      budgetRanges: {
-        notSure: 'Пока не определились',
-        under500: 'До $500',
-        from500: '$500–$1,000',
-        from1000: '$1,000–$2,500',
-        from2500: '$2,500+',
-      },
-      timelines: {
-        asap: 'Как можно скорее',
-        month: 'В течение месяца',
-        flexible: 'Гибкие сроки',
+
+      validation: {
+        nameRequired: 'Укажите ваше имя',
+        contactRequired: 'Укажите контакт для связи',
+        phoneInvalid: 'Укажите корректный номер телефона',
+        telegramInvalid: 'Укажите @username или корректный номер телефона',
+        emailInvalid: 'Проверьте правильность email',
+        projectTypeRequired: 'Выберите тип проекта',
+        messageRequired: 'Расскажите несколько слов о проекте',
       },
     },
 
@@ -501,33 +519,42 @@ export const translations = {
       button: 'Start a project',
       privacy: 'Privacy & Terms',
       formTitle: 'Project enquiry',
+
       name: 'Your name',
-      email: 'Work email',
-      phone: 'Phone',
-      company: 'Company / brand',
+      contactMethod: 'How should we contact you?',
+      contactValue: 'Your contact',
       projectType: 'What do you need?',
-      budget: 'Budget range',
-      timeline: 'Timeline',
-      website: 'Current website, if any',
       message: 'A few words about the project',
       send: 'Send enquiry',
+
+      contactMethods: {
+        phone: 'Phone',
+        telegram: 'Telegram',
+        email: 'Email',
+      },
+
+      contactPlaceholders: {
+        phone: '+380 XX XXX XX XX',
+        telegram: '@username or phone number',
+        email: 'name@example.com',
+      },
+
       projectTypes: {
         newWebsite: 'New website',
         redesign: 'Website redesign',
         landing: 'Landing page',
         support: 'Ongoing support',
+        notSure: 'Not sure yet — I need guidance',
       },
-      budgetRanges: {
-        notSure: 'Not sure yet',
-        under500: 'Under $500',
-        from500: '$500–$1,000',
-        from1000: '$1,000–$2,500',
-        from2500: '$2,500+',
-      },
-      timelines: {
-        asap: 'As soon as possible',
-        month: 'Within a month',
-        flexible: 'Flexible',
+
+      validation: {
+        nameRequired: 'Enter your name',
+        contactRequired: 'Enter your contact details',
+        phoneInvalid: 'Enter a valid phone number',
+        telegramInvalid: 'Enter a valid @username or phone number',
+        emailInvalid: 'Check the email address',
+        projectTypeRequired: 'Select a project type',
+        messageRequired: 'Tell us a little about the project',
       },
     },
 
