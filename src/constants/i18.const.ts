@@ -4,6 +4,7 @@ export const translations = {
       title1: 'Ми робимо бренди, які неможливо ігнорувати',
       title2: 'Ми створюємо сайти, що надихають на дії',
       title3: 'Давайте створимо щось легендарне разом',
+      cta: 'Обговорити проєкт',
     },
     contacts: 'Контакти',
 
@@ -195,6 +196,7 @@ export const translations = {
       title1: 'Мы делаем бренды, которые невозможно игнорировать',
       title2: 'Мы создаём сайты, которые вдохновляют на действия',
       title3: 'Давайте создадим нечто легендарное',
+      cta: 'Обсудить проект',
     },
     contacts: 'Контакты',
 
@@ -387,6 +389,7 @@ export const translations = {
       title1: 'We Make Brands Impossible To Ignore',
       title2: 'We build web sites that move.',
       title3: "Let's Build Something Legendary",
+      cta: 'Start a project',
     },
     contacts: 'Contacts',
 
