@@ -12,6 +12,15 @@ interface ContactMethodConfig {
 const CLOSE_ANIMATION_DURATION = 600;
 const DEFAULT_PHONE_CODE = '+380';
 
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() ?? '';
+
+interface Web3FormsResponse {
+  success?: boolean;
+  message?: string;
+}
+
 const contactMethodConfig: Record<ContactMethod, ContactMethodConfig> = {
   phone: {
     type: 'tel',
@@ -236,6 +245,11 @@ export function renderContact(): string {
             type="submit"
             data-i18="contact.send"
           ></button>
+
+          <span
+            class="field-error submit-error"
+            aria-live="polite"
+          ></span>
         </form>
       </div>
     </div>
@@ -274,6 +288,10 @@ export function initContact(): void {
   const leadContextInput =
     contact?.querySelector<HTMLInputElement>('.lead-context');
 
+  const submitBtn = contact?.querySelector<HTMLButtonElement>('.submit');
+
+  const submitError = contact?.querySelector<HTMLElement>('.submit-error');
+
   const nameError = contact?.querySelector<HTMLElement>('.name-error');
 
   const contactValueError = contact?.querySelector<HTMLElement>(
@@ -301,6 +319,8 @@ export function initContact(): void {
     !projectTypeSelect ||
     !messageInput ||
     !leadContextInput ||
+    !submitBtn ||
+    !submitError ||
     !nameError ||
     !contactValueError ||
     !projectTypeError
@@ -309,6 +329,7 @@ export function initContact(): void {
   }
 
   let formWasSubmitted = false;
+  let isSubmitting = false;
   let closeTimer: number | undefined;
 
   const getContactMethod = (): ContactMethod => {
@@ -398,6 +419,7 @@ export function initContact(): void {
     setControlError(nameInput, nameError, '');
     setContactError('');
     setControlError(projectTypeSelect, projectTypeError, '');
+    submitError.textContent = '';
 
     formWasSubmitted = false;
   };
@@ -408,6 +430,10 @@ export function initContact(): void {
     contactMethodSelect.value = 'phone';
     contactValueInput.value = '';
     leadContextInput.value = '';
+
+    isSubmitting = false;
+    submitBtn.disabled = false;
+    submitBtn.textContent = t('contact.send');
 
     clearValidation();
     updateContactInput(false);
@@ -651,30 +677,91 @@ export function initContact(): void {
     }
   });
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    if (isSubmitting) {
+      return;
+    }
+
     formWasSubmitted = true;
+    submitError.textContent = '';
 
     if (!validateForm()) {
       return;
     }
 
-    const formData = {
+    if (!WEB3FORMS_ACCESS_KEY) {
+      console.error(
+        'VITE_WEB3FORMS_ACCESS_KEY is missing. Add it to .env.local and restart Vite.'
+      );
+      submitError.textContent =
+        'Web3Forms is not configured. Check VITE_WEB3FORMS_ACCESS_KEY.';
+      return;
+    }
+
+    const contactMethod = getContactMethod();
+    const contactValue = contactValueInput.value.trim();
+
+    const projectTypeLabel =
+      projectTypeSelect.selectedOptions[0]?.textContent?.trim() ||
+      projectTypeSelect.value;
+
+    const contactMethodLabel =
+      contactMethodSelect.selectedOptions[0]?.textContent?.trim() ||
+      contactMethod;
+
+    const payload: Record<string, string> = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: 'New ProWeb enquiry',
+      from_name: 'ProWeb Website',
       name: nameInput.value.trim(),
-      contactMethod: getContactMethod(),
-      contactValue: contactValueInput.value.trim(),
-      projectType: projectTypeSelect.value,
-      message: messageInput.value.trim(),
-      leadContext: leadContextInput.value,
+      contact_method: contactMethodLabel,
+      contact: contactValue,
+      project_type: projectTypeLabel,
+      project_type_value: projectTypeSelect.value,
+      message: messageInput.value.trim() || '—',
+      lead_context: leadContextInput.value || 'contact',
+      page_url: window.location.href,
     };
 
-    form.dispatchEvent(
-      new CustomEvent('contact:submit', {
-        bubbles: true,
-        detail: formData,
-      })
-    );
+    if (contactMethod === 'email') {
+      payload.email = contactValue;
+    }
+
+    isSubmitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json()) as Web3FormsResponse;
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || `HTTP ${response.status}`);
+      }
+
+      submitBtn.textContent = 'Sent ✓';
+
+      window.setTimeout(() => {
+        closeModal();
+      }, 1200);
+    } catch (error) {
+      console.error('Web3Forms submit error:', error);
+      submitError.textContent = 'Could not send the form. Please try again.';
+      submitBtn.textContent = t('contact.send');
+    } finally {
+      isSubmitting = false;
+      submitBtn.disabled = false;
+    }
   });
 
   openBtn.addEventListener('click', () => {
