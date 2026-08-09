@@ -10,6 +10,70 @@ export const translations = {
 
     solutions: {
       title: 'Що ми робимо',
+      cta: 'Обговорити проєкт',
+      details: 'Детальніше',
+      items: {
+        landing: {
+          title: 'Landing Page',
+          description:
+            'Односторінковий сайт для продукту, послуги або рекламної кампанії. Продумуємо структуру, ключові аргументи та чіткий шлях до заявки — з урахуванням запуску реклами.',
+        },
+        businessWebsite: {
+          title: 'Сайт для бізнесу',
+          description:
+            'Компактний багатосторінковий сайт для компанії, експерта або сервісного бізнесу: про компанію, послуги, кейси, відгуки та контакти. Зрозуміла структура й швидкий запуск.',
+        },
+        corporateWebsite: {
+          title: 'Корпоративний сайт',
+          description:
+            'Багатосторінковий сайт для компаній зі складнішою структурою, кількома напрямами або великою кількістю контенту. Закладаємо основу для розвитку, SEO та подальших інтеграцій.',
+        },
+        ecommerce: {
+          title: 'Інтернет-магазин',
+          description:
+            'Повноцінний майданчик для онлайн-продажів: каталог, картки товарів, кошик, оформлення замовлення та, за потреби, інтеграції з оплатою, доставкою й CRM.',
+        },
+        productCatalog: {
+          title: 'Сайт-каталог',
+          description:
+            'Рішення для великого асортименту без обов’язкової онлайн-оплати: категорії, фільтри та пошук. Підходить, коли товари або послуги потрібно показати, а замовлення приймає менеджер.',
+        },
+        redesign: {
+          title: 'Редизайн сайту',
+          description:
+            'Оновлюємо візуальну подачу, структуру та функціональність існуючого сайту. Враховуємо перенесення контенту, URL-структуру та SEO-ризики під час оновлення.',
+        },
+        seo: {
+          title: 'SEO',
+          description:
+            'Технічний аудит і базова оптимізація сайту для пошуку: індексація, структура, метадані, швидкість та рекомендації щодо контенту й подальшого просування.',
+        },
+        googleBusiness: {
+          title: 'Google Business Profile',
+          description:
+            'Налаштовуємо та оптимізуємо профіль компанії в Google: основна інформація, категорії, контакти, візуальні матеріали та базові рекомендації для локальної видимості.',
+        },
+        analytics: {
+          title: 'Аналітика та відстеження',
+          description:
+            'Налаштовуємо Google Analytics 4, Google Tag Manager, події та конверсії, щоб бачити, звідки приходять користувачі та які дії вони виконують на сайті.',
+        },
+        googleAds: {
+          title: 'Google Ads',
+          description:
+            'Допомагаємо запустити рекламні кампанії, налаштувати відстеження конверсій і підготувати основу для подальшої оптимізації реклами.',
+        },
+        multilingual: {
+          title: 'Багатомовні сайти',
+          description:
+            'Будуємо зрозумілу структуру мовних версій, перемикання мов і технічну основу для локалізації сайту та виходу на нові ринки.',
+        },
+        support: {
+          title: 'Підтримка сайту',
+          description:
+            'Допомагаємо після запуску: оновлення контенту й функціональності, технічні зміни, резервні копії та подальший розвиток сайту за потреби.',
+        },
+      },
     },
 
     selectedWork: {
@@ -166,6 +230,8 @@ export const translations = {
         newWebsite: 'Новий сайт',
         redesign: 'Редизайн сайту',
         landing: 'Лендінг',
+        ecommerce: 'Інтернет-магазин / каталог',
+        marketing: 'SEO / реклама / аналітика',
         support: 'Підтримка сайту',
         notSure: 'Ще не визначився — потрібна консультація',
       },
@@ -202,6 +268,70 @@ export const translations = {
 
     solutions: {
       title: 'Что мы делаем',
+      cta: 'Обсудить проект',
+      details: 'Подробнее',
+      items: {
+        landing: {
+          title: 'Landing Page',
+          description:
+            'Одностраничный сайт для продукта, услуги или рекламной кампании. Продумываем структуру, ключевые аргументы и понятный путь к заявке — с учётом запуска рекламы.',
+        },
+        businessWebsite: {
+          title: 'Сайт для бизнеса',
+          description:
+            'Компактный многостраничный сайт для компании, эксперта или сервисного бизнеса: о компании, услуги, кейсы, отзывы и контакты. Понятная структура и быстрый запуск.',
+        },
+        corporateWebsite: {
+          title: 'Корпоративный сайт',
+          description:
+            'Многостраничный сайт для компаний с более сложной структурой, несколькими направлениями или большим объёмом контента. Закладываем основу для развития, SEO и будущих интеграций.',
+        },
+        ecommerce: {
+          title: 'Интернет-магазин',
+          description:
+            'Полноценная площадка для онлайн-продаж: каталог, карточки товаров, корзина, оформление заказа и, при необходимости, интеграции с оплатой, доставкой и CRM.',
+        },
+        productCatalog: {
+          title: 'Сайт-каталог',
+          description:
+            'Решение для большого ассортимента без обязательной онлайн-оплаты: категории, фильтры и поиск. Подходит, когда товары или услуги нужно показать, а заказ принимает менеджер.',
+        },
+        redesign: {
+          title: 'Редизайн сайта',
+          description:
+            'Обновляем визуальную подачу, структуру и функциональность существующего сайта. Учитываем перенос контента, URL-структуру и SEO-риски при обновлении.',
+        },
+        seo: {
+          title: 'SEO',
+          description:
+            'Технический аудит и базовая оптимизация сайта для поиска: индексация, структура, метаданные, скорость и рекомендации по контенту и дальнейшему продвижению.',
+        },
+        googleBusiness: {
+          title: 'Google Business Profile',
+          description:
+            'Настраиваем и оптимизируем профиль компании в Google: основную информацию, категории, контакты, визуальные материалы и базовые рекомендации для локальной видимости.',
+        },
+        analytics: {
+          title: 'Аналитика и отслеживание',
+          description:
+            'Настраиваем Google Analytics 4, Google Tag Manager, события и конверсии, чтобы видеть, откуда приходят пользователи и какие действия они выполняют на сайте.',
+        },
+        googleAds: {
+          title: 'Google Ads',
+          description:
+            'Помогаем запустить рекламные кампании, настроить отслеживание конверсий и подготовить основу для дальнейшей оптимизации рекламы.',
+        },
+        multilingual: {
+          title: 'Мультиязычные сайты',
+          description:
+            'Строим понятную структуру языковых версий, переключение языков и техническую основу для локализации сайта и выхода на новые рынки.',
+        },
+        support: {
+          title: 'Поддержка сайта',
+          description:
+            'Помогаем после запуска: обновляем контент и функциональность, вносим технические изменения, настраиваем резервные копии и развиваем сайт по мере необходимости.',
+        },
+      },
     },
 
     selectedWork: {
@@ -359,6 +489,8 @@ export const translations = {
         newWebsite: 'Новый сайт',
         redesign: 'Редизайн сайта',
         landing: 'Лендинг',
+        ecommerce: 'Интернет-магазин / каталог',
+        marketing: 'SEO / реклама / аналитика',
         support: 'Поддержка сайта',
         notSure: 'Пока не определился — нужна консультация',
       },
@@ -395,6 +527,70 @@ export const translations = {
 
     solutions: {
       title: 'What we do',
+      cta: 'Discuss your project',
+      details: 'Learn more',
+      items: {
+        landing: {
+          title: 'Landing Page',
+          description:
+            'A focused one-page website for a product, service, or advertising campaign. We shape the structure, key arguments, and a clear path to enquiry with paid traffic in mind.',
+        },
+        businessWebsite: {
+          title: 'Business Website',
+          description:
+            'A compact multi-page website for a company, expert, or service business: company information, services, case studies, testimonials, and contacts with a clear structure and fast launch.',
+        },
+        corporateWebsite: {
+          title: 'Corporate Website',
+          description:
+            'A multi-page website for companies with a more complex structure, several business areas, or a larger content base. Built with future growth, SEO, and integrations in mind.',
+        },
+        ecommerce: {
+          title: 'E-commerce',
+          description:
+            'A complete online sales platform with a product catalog, product pages, cart, checkout, and, where needed, integrations with payments, delivery services, and CRM systems.',
+        },
+        productCatalog: {
+          title: 'Product Catalog',
+          description:
+            'A structured catalog for a large product or service range without mandatory online payment, including categories, filters, and search while enquiries are handled by a manager.',
+        },
+        redesign: {
+          title: 'Website Redesign',
+          description:
+            'We update the visual presentation, structure, and functionality of an existing website while taking content migration, URL structure, and SEO risks into account.',
+        },
+        seo: {
+          title: 'SEO',
+          description:
+            'Technical audit and foundational search optimisation covering indexing, site structure, metadata, performance, and recommendations for content and further growth.',
+        },
+        googleBusiness: {
+          title: 'Google Business Profile',
+          description:
+            'We set up and optimise your Google Business Profile, including core business information, categories, contacts, visual assets, and basic recommendations for stronger local visibility.',
+        },
+        analytics: {
+          title: 'Analytics & Tracking',
+          description:
+            'We configure Google Analytics 4, Google Tag Manager, events, and conversions so you can see where users come from and what they do on the website.',
+        },
+        googleAds: {
+          title: 'Google Ads',
+          description:
+            'We help launch advertising campaigns, configure conversion tracking, and prepare a solid foundation for ongoing campaign optimisation.',
+        },
+        multilingual: {
+          title: 'Multilingual Websites',
+          description:
+            'We build a clear language-version structure, language switching, and the technical foundation needed to localise a website and enter new markets.',
+        },
+        support: {
+          title: 'Website Support',
+          description:
+            'We stay involved after launch with content and functionality updates, technical changes, backups, and ongoing website improvements when needed.',
+        },
+      },
     },
 
     selectedWork: {
@@ -546,6 +742,8 @@ export const translations = {
         newWebsite: 'New website',
         redesign: 'Website redesign',
         landing: 'Landing page',
+        ecommerce: 'E-commerce / product catalog',
+        marketing: 'SEO / ads / analytics',
         support: 'Ongoing support',
         notSure: 'Not sure yet — I need guidance',
       },

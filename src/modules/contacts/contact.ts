@@ -187,6 +187,16 @@ export function renderContact(): string {
                 ></option>
 
                 <option
+                  value="ecommerce"
+                  data-i18="contact.projectTypes.ecommerce"
+                ></option>
+
+                <option
+                  value="marketing"
+                  data-i18="contact.projectTypes.marketing"
+                ></option>
+
+                <option
                   value="support"
                   data-i18="contact.projectTypes.support"
                 ></option>

@@ -1,95 +1,90 @@
-export interface ISolutions {
-    title: string
-    description: string
-    linkTitle: string
-    linkUrl: string
+export type SolutionProjectType =
+  | 'new-website'
+  | 'redesign'
+  | 'landing'
+  | 'ecommerce'
+  | 'marketing'
+  | 'support';
+
+export interface ISolution {
+  titleKey: string;
+  descriptionKey: string;
+  projectType: SolutionProjectType;
+  leadContext: string;
+  detailsUrl?: string;
 }
 
-export const solutionsConst: ISolutions[] = [
-    {
-        title: 'Landing page',
-        description: 'Продаюча сторінка для одного товару, послуги або акції. Висока конверсія за рахунок пропрацьованої структури, тригерів довіри та чіткого заклику до дії. Ідеальний для запуску реклами в Google Ads та Facebook.',
-        linkTitle: 'Детальніше про лендінг',
-        linkUrl: '#'
-    },
-    {
-        title: 'Сайт визитка',
-        description: '\n' +
-            'Стислий сайт на 5–10 сторінок: про компанію, послуги, кейси, контакти,\n' +
-            'відгуки. Базове представництво в інтернеті для малого бізнесу, експертів\n' +
-            'і фрилансерів. Швидкий запуск, зрозуміла адмінка для самостійного редагування.',
-        linkTitle: 'Детальніше ',
-        // linkTitle: 'Детальніше про сайт-візитку',
-        linkUrl: '#'
-    },
-    {
-        title: 'Коорпоративный сайт',
-        description: '\n' +
-            'Багатосторінковий сайт для компаній, які професійно презентують своє\n' +
-            'виробництво, послуги та кейси. Продумана структура, сильний імідж бренду\n' +
-            'та база під подальше SEO-просування і масштабування.',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Интернет магазин',
-        description: '\n' +
-            'Повноцінний майданчик для онлайн-продажів: каталог, картки товарів,\n' +
-            'кошик, інтеграція з оплатою, доставкою та CRM. Зручна логіка покупки\n' +
-            'та простий шлях до оформлення замовлення.',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Сайт каталог',
-        description: '\n' +
-            'Рішення для великого асортименту без онлайн-оплати: структуровані категорії,\n' +
-            'фільтри та зручний пошук. Підходить, коли важливо показати товари чи\n' +
-            'послуги, а замовлення приймаються через заявку або менеджера.',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Редизайн сайта',
-        description: '\n' +
-            'Оновлення дизайну та функціоналу без втрати позицій у Google. Аудит поточного сайту, перенесення контенту, збереження URL-структури та 301-редиректи. Підходить для компаній, сайт яких застарів візуально або технічно.',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'SEO',
-        description: 'Техническое SEO и улучшение видимости в поиске, и рост трафика',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Google Business Profile',
-        description: 'Настройка и оптимизация бизнес-профиля Google',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Google Analytics',
-        description: 'Настройка аналитики и отслеживание конверсий, Google Tag Manager, события и отчётность',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Google Ads',
-        description: 'Запуск и оптимизация рекламных кампаний',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Мультиязычные сайты',
-        description: 'Локализация и выход на новые рынки',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    },
-    {
-        title: 'Техническая поддержка',
-        description: ', обновления и резервные копии',
-        linkTitle: 'Детальніше',
-        linkUrl: '#'
-    }
-]
+export const solutionsConst: ISolution[] = [
+  {
+    titleKey: 'solutions.items.landing.title',
+    descriptionKey: 'solutions.items.landing.description',
+    projectType: 'landing',
+    leadContext: 'services:landing-page',
+  },
+  {
+    titleKey: 'solutions.items.businessWebsite.title',
+    descriptionKey: 'solutions.items.businessWebsite.description',
+    projectType: 'new-website',
+    leadContext: 'services:business-website',
+  },
+  {
+    titleKey: 'solutions.items.corporateWebsite.title',
+    descriptionKey: 'solutions.items.corporateWebsite.description',
+    projectType: 'new-website',
+    leadContext: 'services:corporate-website',
+  },
+  {
+    titleKey: 'solutions.items.ecommerce.title',
+    descriptionKey: 'solutions.items.ecommerce.description',
+    projectType: 'ecommerce',
+    leadContext: 'services:ecommerce',
+  },
+  {
+    titleKey: 'solutions.items.productCatalog.title',
+    descriptionKey: 'solutions.items.productCatalog.description',
+    projectType: 'ecommerce',
+    leadContext: 'services:product-catalog',
+  },
+  {
+    titleKey: 'solutions.items.redesign.title',
+    descriptionKey: 'solutions.items.redesign.description',
+    projectType: 'redesign',
+    leadContext: 'services:website-redesign',
+  },
+  {
+    titleKey: 'solutions.items.seo.title',
+    descriptionKey: 'solutions.items.seo.description',
+    projectType: 'marketing',
+    leadContext: 'services:seo',
+  },
+  {
+    titleKey: 'solutions.items.googleBusiness.title',
+    descriptionKey: 'solutions.items.googleBusiness.description',
+    projectType: 'marketing',
+    leadContext: 'services:google-business-profile',
+  },
+  {
+    titleKey: 'solutions.items.analytics.title',
+    descriptionKey: 'solutions.items.analytics.description',
+    projectType: 'marketing',
+    leadContext: 'services:analytics',
+  },
+  {
+    titleKey: 'solutions.items.googleAds.title',
+    descriptionKey: 'solutions.items.googleAds.description',
+    projectType: 'marketing',
+    leadContext: 'services:google-ads',
+  },
+  {
+    titleKey: 'solutions.items.multilingual.title',
+    descriptionKey: 'solutions.items.multilingual.description',
+    projectType: 'new-website',
+    leadContext: 'services:multilingual-website',
+  },
+  {
+    titleKey: 'solutions.items.support.title',
+    descriptionKey: 'solutions.items.support.description',
+    projectType: 'support',
+    leadContext: 'services:website-support',
+  },
+];

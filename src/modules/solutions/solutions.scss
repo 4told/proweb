@@ -9,18 +9,19 @@
     gap: 24px;
 
     @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr)
+      grid-template-columns: 1fr;
     }
   }
 
   .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     gap: 25px;
-    padding: 26px 28px;
-    border-radius: 6px;
+    padding: 26px 28px 76px;
     border: 1px solid var(--border);
+    border-radius: 6px;
     box-shadow: 0 4px 8px 0 var(--shadow);
     background: var(--accent-bg);
     color: var(--text);
@@ -35,14 +36,12 @@
       inset: 0;
       pointer-events: none;
       background: radial-gradient(
-              125px circle at var(--mouse-x) var(--mouse-y),
-              rgba(74, 158, 255, 0.35),
-              transparent 60%
+        125px circle at var(--mouse-x) var(--mouse-y),
+        rgba(74, 158, 255, 0.35),
+        transparent 60%
       );
-
       opacity: 0.18;
-      transition: opacity .2s ease;
-
+      transition: opacity 0.2s ease;
     }
 
     &:hover {
@@ -53,10 +52,9 @@
         opacity: 1;
       }
 
-      a {
+      .solution-cta {
         bottom: 12px;
         opacity: 1;
-        transition: all 0.4s ease-in-out;
       }
     }
 
@@ -72,19 +70,35 @@
       line-height: 1.6;
     }
 
-    a {
-      position: absolute;
-      bottom: -40px;
-      left: 12px;
-      right: 12px;
+    .solution-details {
       color: var(--text);
       text-decoration: none;
-      border-radius: 12px;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: var(--text-h);
+      }
+    }
+
+    .solution-cta {
+      position: absolute;
+      right: 12px;
+      bottom: -48px;
+      left: 12px;
       padding: 8px 12px;
+      border: 0;
+      border-radius: 12px;
       background: var(--accent-bg);
+      color: var(--text);
       text-align: center;
+      font: inherit;
       font-size: 1rem;
+      cursor: pointer;
       opacity: 0;
+      transition:
+        bottom 0.4s ease-in-out,
+        opacity 0.4s ease-in-out,
+        background-color 0.25s ease;
 
       @media (max-width: media.$mobile) {
         bottom: 12px;
@@ -93,6 +107,11 @@
 
       &:hover {
         background: var(--bg);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--accent-border);
+        outline-offset: 2px;
       }
     }
   }
