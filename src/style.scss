@@ -233,14 +233,29 @@ header {
     align-items: center;
     gap: 40px;
     animation: marquee 25s linear infinite;
+  }
 
-    span {
-      white-space: nowrap;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--text);
+  &-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text);
+
+    i {
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: normal;
     }
+  }
+
+  &-separator {
+    white-space: nowrap;
+    font-size: 14px;
+    color: var(--text);
   }
 }
 

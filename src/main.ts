@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style.scss';
 import { initScrollProgress, initTheme, observer } from './theme';
 import {

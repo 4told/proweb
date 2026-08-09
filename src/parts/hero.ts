@@ -1,19 +1,19 @@
 const marquee = [
-  { name: 'Scroll Animations' },
-  { name: 'Mobile' },
-  { name: 'Angular' },
-  { name: 'React' },
-  { name: 'Responsive' },
-  { name: 'E-Commerce' },
-  { name: 'WordPress' },
-  { name: 'PrestaShop' },
-  { name: 'MapBox Maps API' },
-  { name: 'Google Maps' },
-  { name: 'E-Charts' },
-  { name: 'Analytics 4' },
-  { name: 'AdSense' },
-  { name: 'SEO' },
-  { name: 'Dashboards' },
+  { name: 'Scroll Animations', icon: 'bi-arrows-move' },
+  { name: 'Mobile', icon: 'bi-phone' },
+  { name: 'Angular', icon: 'bi-code-slash' },
+  { name: 'React', icon: 'bi-braces' },
+  { name: 'Responsive', icon: 'bi-display' },
+  { name: 'E-Commerce', icon: 'bi-cart3' },
+  { name: 'WordPress', icon: 'bi-wordpress' },
+  { name: 'PrestaShop', icon: 'bi-shop' },
+  { name: 'MapBox Maps API', icon: 'bi-map' },
+  { name: 'Google Maps', icon: 'bi-geo-alt' },
+  { name: 'E-Charts', icon: 'bi-graph-up' },
+  { name: 'Analytics 4', icon: 'bi-bar-chart-line' },
+  { name: 'AdSense', icon: 'bi-badge-ad' },
+  { name: 'SEO', icon: 'bi-search' },
+  { name: 'Dashboards', icon: 'bi-speedometer2' },
 
   //todo add another items
 ];
@@ -63,14 +63,17 @@ export function renderHero(): string {
         <section>
             <div class="marquee"> 
                 <div class="marquee-track">
-                    ${[...marquee, ...marquee]
-                      .map(
-                        (i) => `
-                        <span>${i.name}</span>
-                        <span>•</span>
-                    `
-                      )
-                      .join('')}
+                   ${[...marquee, ...marquee]
+                     .map(
+                       (i) => `
+      <span class="marquee-item">
+        <i class="bi ${i.icon}" aria-hidden="true"></i>
+        <span>${i.name}</span>
+      </span>
+      <span class="marquee-separator">•</span>
+    `
+                     )
+                     .join('')}
                 </div>
             </div>
         </section>
